@@ -1,0 +1,311 @@
+/* About.css */
+
+.about-page {
+    font-family: 'Roboto', sans-serif;
+    color: #0A4834; /* Dark Green/Teal for general text on light backgrounds */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #0A4834; /* Dark Green/Teal for the hero section */
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 90%;
+    /* Subtle shadow using black for a cleaner look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumbs {
+    color: #EBE1CF; /* Creamy Beige for breadcrumbs on the dark background */
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.breadcrumbs a {
+    color: #9F8151; /* Muted Brown/Gold for breadcrumb links */
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+    color: #FFFFFF; /* White on hover for contrast */
+}
+
+.breadcrumbs .separator {
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #EBE1CF; /* Creamy Beige separator for consistency */
+}
+
+.hero-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #FFFFFF; /* White for main title on dark background */
+    margin-bottom: 0;
+}
+
+/* Our Story Section */
+.our-story-section {
+    padding: 60px 20px;
+    background-color: #FFFFFF; /* White background */
+}
+
+.our-story-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+@media (min-width: 992px) {
+    .our-story-section .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .our-story-section .text-content {
+        flex: 0 0 50%;
+        padding-right: 60px;
+    }
+
+    .our-story-section .image-content {
+        flex: 0 0 40%;
+    }
+}
+
+.our-story-section .section-heading {
+    font-size: 1.6em;
+    color: #9F8151; /* Muted Brown/Gold for section heading */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.our-story-section .story-title {
+    font-size: 2.5em;
+    color: #0A4834; /* Dark Green/Teal for story title */
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.our-story-section .highlight {
+    color: #9F8151; /* Muted Brown/Gold for highlight */
+    font-weight: bold;
+}
+
+.our-story-section .story-description {
+    color: #000000; /* Black for description for strong readability */
+    line-height: 1.7;
+    font-size: 1.15em;
+    margin-bottom: 30px;
+}
+
+.our-story-section .image-content img {
+    width: 100%;
+    border-radius: 8px;
+    /* Subtle shadow using black for a cleaner look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Vision and Mission Section */
+.vision-mission-section {
+    padding: 40px 20px;
+    background-color: #EBE1CF; /* Creamy Beige background */
+}
+
+.vision-mission-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.vision-mission-section .block {
+    background-color: #FFFFFF; /* White background for blocks */
+    border-radius: 8px;
+    padding: 30px;
+    /* Subtle shadow using black for a cleaner look */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    flex: 1 0 350px;
+}
+
+.vision-mission-section .block-title {
+    color: #0A4834; /* Dark Green/Teal for titles */
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.vision-mission-section .block-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vision-mission-section .block-list-item {
+    color: #000000; /* Black for list items for readability */
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.vision-mission-section .block-list-item::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #9F8151; /* Muted Brown/Gold bullet */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Meet Our Best Team Section */
+.meet-our-team-section {
+    padding: 60px 20px;
+    background-color: #F8F8F8; /* Using a very light grey for subtle contrast */
+    text-align: center;
+}
+
+.meet-our-team-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meet-our-team-section .section-heading {
+    font-size: 2.2em;
+    color: #0A4834; /* Dark Green/Teal for heading */
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.meet-our-team-section .team-members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.meet-our-team-section .team-member {
+    background-color: #FFFFFF; /* White background for team member cards */
+    border-radius: 8px;
+    /* Subtle shadow using black for a cleaner look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.meet-our-team-section .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.meet-our-team-section .member-info h3 {
+    color: #0A4834; /* Dark Green/Teal for name */
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.meet-our-team-section .member-info .role {
+    color: #9F8151; /* Muted Brown/Gold for role */
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.meet-our-team-section .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Styling for React Icons */
+.meet-our-team-section .social-links a {
+    /* This targets the <a> tag wrapping the icon */
+    display: inline-flex; /* Ensures it behaves like a block for padding/sizing */
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Increased size for clickable area */
+    height: 40px; /* Increased size for clickable area */
+    border-radius: 50%;
+    background-color: #EBE1CF; /* Creamy Beige for icon background, softer */
+    color: #0A4834; /* Dark Green/Teal for icon color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+}
+
+.meet-our-team-section .social-links a:hover {
+    background-color: #9F8151; /* Muted Brown/Gold on hover */
+    color: #FFFFFF; /* White on hover for better contrast on gold */
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Wapi Pay Key Figures Section - More Appealing */
+.wapi-pay-key-figures-section {
+    padding: 80px 20px;
+    background-color: #9F8151; /* Muted Brown/Gold for a strong contrasting section */
+    text-align: center;
+    border-radius: 8px;
+    /* Subtle shadow using black for a cleaner look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.wapi-pay-key-figures-section .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.wapi-pay-key-figures-section .section-heading {
+    font-size: 2.5em;
+    color: #0A4834; /* Dark Green/Teal for heading on brown/gold background */
+    margin-bottom: 50px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.wapi-pay-key-figures-section .key-figures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.wapi-pay-key-figures-section .key-figure {
+    text-align: center;
+    padding: 30px;
+    background-color: #EBE1CF; /* Creamy Beige background for key figure cards */
+    border-radius: 6px;
+    /* Subtle shadow using black for a cleaner look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.wapi-pay-key-figures-section .figure-value {
+    color: #0A4834; /* Dark Green/Teal for figure value */
+    font-size: 2.3em;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.wapi-pay-key-figures-section .figure-description {
+    color: #000000; /* Black for description for readability on creamy beige */
+    font-size: 0.9em;
+    line-height: 1.7;
+    opacity: 0.9;
+}

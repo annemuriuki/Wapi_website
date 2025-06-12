@@ -1,0 +1,125 @@
+/* Signup.css */
+
+.signup-container {
+    background-color: #EBE1CF; /* Creamy Beige background for a warm base */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.signup-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 900px;
+    width: 100%; /* Ensure it takes full available width within the container */
+}
+
+.signup-header h1 {
+    color: #0A4834; /* Dark Green/Teal title */
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.signup-header p {
+    color: #000000; /* Black text for maximum readability on light background */
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.signup-body {
+    display: flex; /* Arrange items side by side */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Distribute space around items */
+    gap: 30px; /* Space between the cards */
+    max-width: 1200px; /* Limit the width of the content body */
+    width: 100%;
+}
+
+.get-started,
+.signup-form {
+    background-color: #0A4834; /* Dark Green/Teal for both cards */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle black shadow */
+    width: calc(50% - 15px); /* Take up roughly half the width with spacing */
+    min-width: 300px; /* Ensure a minimum width for smaller screens */
+}
+
+.get-started h2 {
+    color: #FFFFFF; /* White heading for contrast on dark green */
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.get-started ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.get-started li {
+    color: #EBE1CF; /* Creamy Beige text for readability on dark green */
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+.checkmark {
+    color: #9F8151; /* Muted Brown/Gold checkmark */
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.get-started .join-us {
+    color: #9F8151; /* Muted Brown/Gold bold text */
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.signup-form h2 {
+    color: #FFFFFF; /* White heading for contrast on dark green */
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.account-type {
+    margin-bottom: 25px;
+}
+
+
+.continue-button {
+    background-color: #9F8151; /* Muted Brown/Gold button background */
+    color: #000000; /* Black text for button */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.continue-button:hover {
+    background-color: #FFFFFF; /* White on hover */
+    color: #0A4834; /* Dark Green/Teal text on hover for good contrast */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .signup-body {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center;
+    }
+
+    .get-started,
+    .signup-form {
+        width: 100%; /* Take full width on smaller screens */
+    }
+}
