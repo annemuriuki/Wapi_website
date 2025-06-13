@@ -1,0 +1,254 @@
+/* ... existing global styles (if any) ... */
+
+/* Left Section Updates */
+.left-section {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.podcast-title {
+  font-size: 2.8em; /* Adjusted font size */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0A4834; /* Dark Green/Teal */
+  line-height: 1.1;
+}
+
+.podcast-description {
+  font-size: 1.1em; /* Adjusted font size */
+  color: #000000; /* Black for maximum readability */
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.appstore-button,
+.playstore-button {
+  background-color: #9F8151; /* Muted Brown/Gold */
+  color: #000000; /* Black */
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.playstore-button {
+  background-color: #0A4834; /* Dark Green/Teal for contrast */
+  color: #FFFFFF; /* White */
+}
+
+.appstore-button:hover {
+  background-color: #FFFFFF; /* White on hover */
+  color: #0A4834; /* Dark Green/Teal on hover */
+}
+
+.playstore-button:hover {
+  background-color: #EBE1CF; /* Creamy Beige on hover */
+  color: #0A4834; /* Dark Green/Teal on hover */
+}
+
+.button-text {
+  font-size: 1em;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  /* If these are SVG or icon fonts, you might need to target their fill/color directly */
+  color: inherit; /* Inherit color from parent button for consistency */
+}
+
+/* Right Section - Image Updates */
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.image-background {
+  border-radius: 15px;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #9F8151; /* Muted Brown/Gold */
+}
+
+.wapi-mobile-image {
+  width: auto;
+  max-height: 90%;
+}
+
+.secondary-image-container {
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle black shadow */
+  width: 180px;
+  height: 220px;
+}
+
+.secondary-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 50px;
+  background-color: #EBE1CF; /* Creamy Beige */
+}
+
+.feature-card {
+  background-color: #FFFFFF; /* White */
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Subtle black shadow */
+  width: 28%;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  color: #0A4834; /* Dark Green/Teal for icons on white background */
+}
+
+.feature-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #0A4834; /* Dark Green/Teal */
+}
+
+.feature-description {
+  font-size: 1em;
+  color: #000000; /* Black for maximum readability */
+  line-height: 1.5;
+}
+
+/* What We Provide Section */
+.what-we-provide-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 50px;
+  background-color: #0A4834; /* Dark Green/Teal */
+}
+
+.what-we-provide-content {
+  flex: 1.2;
+  padding-right: 60px;
+}
+
+.what-we-provide-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.what-we-provide-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle black shadow */
+}
+
+.section-heading {
+  font-size: 1.1em;
+  color: #FFFFFF; /* White */
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.section-heading .icon {
+  margin-right: 8px;
+  color: #9F8151; /* Muted Brown/Gold for the icon */
+}
+
+.provider-item {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: flex-start;
+}
+
+.provider-icon {
+  font-size: 2em;
+  color: #9F8151; /* Muted Brown/Gold */
+  margin-right: 20px;
+}
+
+.provider-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #FFFFFF; /* White */
+  margin-bottom: 8px;
+}
+
+.provider-description {
+  color: #EBE1CF; /* Creamy Beige */
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Slick Slider Styles (you might need to adjust these based on the default theme) */
+.slick-slider {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.slick-slide > div {
+  margin: 0 15px;
+}
+
+/* Optional: Style for dots */
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #9F8151; /* Muted Brown/Gold dot color */
+  opacity: 0.7;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #0A4834; /* Dark Green/Teal active dot color */
+  opacity: 1;
+}
+
+/* ... existing styles ... */
+
+/* Blue Banner Section */
+.blue-banner-section {
+  background-color: #EBE1CF; /* Creamy Beige */
+  color: #0A4834; /* Dark Green/Teal text */
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.blue-banner-text {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.4;
+}
