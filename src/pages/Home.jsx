@@ -17,7 +17,9 @@ import logo3 from '../assets/logo3.png';
 import logo4 from '../assets/logo4.png';
 import strategicConsultingIcon from '../assets/StrategicConsulting .jpg';
 import perfomanceOptimizationIcon from '../assets/PerfomanceOptimization .jpg';
-import digitalTransformationIcon from '../assets/DigitalTransformation .jpg';
+import digitalTransformationIcon from '../assets/DigitalTransformation  .jpg';
+
+
 
 function Home() {
 
@@ -98,7 +100,7 @@ function Home() {
         <div className="home-content">
           <p className="welcome-text">WELCOME TO OUR SOLUTIONS</p>
           <h1 className="hero-title">Innovate. Transform.<br />Lead the Future.</h1>
-          <p className="hero-subtitle">Empowering businesses to achieve unparalleled growth with cutting-edge solutions and strategic foresight. Discover how we can elevate your vision.</p>
+          <p className="hero-subtitle">Empowering businesses to achieve unparalleled growth with cutting-edge solutions and strategic foresight. <br></br>Discover how we can elevate your vision.</p>
         </div>
         <div className="hero-image-container">
           <img src={HeroImage} alt="Modern Business Solution" className="hero-realistic-image" />
