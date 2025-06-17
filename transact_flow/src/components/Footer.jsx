@@ -2,17 +2,15 @@ import React from "react";
 import { FaGooglePlay } from "react-icons/fa";
 import { SiAppstore } from "react-icons/si";
 import { MdLocationOn, MdPhone, MdEmail, MdMailOutline } from "react-icons/md";
-import "./Footer.css"; // Import the CSS file for styling
+import "./Footer.css"; 
 
 const Footer = () => {
-  // Define placeholder app store links for template display
-  const playStoreLink = "#"; // Placeholder link
-  const appStoreLink = "#"; // Placeholder link
+  const playStoreLink = "#"; 
+  const appStoreLink = "#"; 
 
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Column 1 - Global Headquarters Contact Info */}
         <div className="footer-column">
           <h3 className="footer-title">Global Headquarters</h3>
           <div className="contact-section">
@@ -55,7 +53,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Column 2 - Regional Office Contact Info */}
         <div className="footer-column">
           <h3 className="footer-title">Regional Office</h3>
           <div className="contact-section">
@@ -97,9 +94,6 @@ const Footer = () => {
             <p className="section-content">P.O Box 5432, Metroville</p>
           </div>
         </div>
-
-
-        {/* Column 3 - Apps Download with placeholder buttons */}
         <div className="footer-column">
           <h3 className="footer-title">Stay Connected</h3>
           <p className="footer-text">
@@ -118,7 +112,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright and Links */}
       <div className="footer-bottom">
         <p className="copyright">
           &copy; 2025 [Your Company Name]. All rights reserved.

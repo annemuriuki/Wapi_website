@@ -1,6 +1,6 @@
 .footer {
-  background-color: #0A4834; /* Dark Green/Teal for the main footer background */
-  color: #EBE1CF; /* Light creamy beige for main text for good contrast */
+  background-color: #0A4834; 
+  color: #EBE1CF; 
   padding: 2rem 1rem;
   font-family: Arial, sans-serif;
 }
@@ -21,7 +21,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1.2rem;
-  color: #9F8151; /* Muted brown/gold for titles */
+  color: #9F8151; 
 }
 
 .contact-section {
@@ -32,13 +32,13 @@
   font-weight: bold;
   margin-bottom: 0.3rem;
   font-size: 0.9rem;
-  color: #EBE1CF; /* Light creamy beige for section labels for good readability */
+  color: #EBE1CF; 
 }
 
 .section-content {
   margin: 0;
   line-height: 1.5;
-  color: #EBE1CF; /* Light creamy beige for text for readability */
+  color: #EBE1CF; 
   font-size: 0.9rem;
 }
 
@@ -53,14 +53,14 @@
 }
 
 .footer-list a {
-  color: #EBE1CF; /* Links remain light creamy beige */
+  color: #EBE1CF; 
   text-decoration: none;
   font-size: 0.9rem;
 }
 
 .footer-list a:hover {
   text-decoration: underline;
-  color: #9F8151; /* Muted brown/gold hover effect for consistency */
+  color: #9F8151; 
 }
 
 .footer-text {
@@ -77,8 +77,8 @@
 }
 
 .app-button {
-  background-color: #9F8151; /* Muted brown/gold for button background */
-  color: #000000; /* Black text on brown/gold for strong contrast */
+  background-color: #9F8151;
+  color: #000000; 
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -87,12 +87,12 @@
   cursor: pointer;
   font-size: 0.9rem;
   text-decoration: none;
-  transition: background-color 0.2s, color 0.2s; /* Smooth transition for hover */
+  transition: background-color 0.2s, color 0.2s; 
 }
 
 .app-button:hover {
-  background-color: #FFFFFF; /* White on hover */
-  color: #0A4834; /* Dark Green/Teal text on white hover */
+  background-color: #FFFFFF; 
+  color: #0A4834; 
 }
 
 .app-icon {
@@ -104,10 +104,10 @@
   max-width: 1200px;
   margin: 2rem auto 0;
   padding-top: 1rem;
-  border-top: 1px solid #9F8151; /* Muted brown/gold border for a subtle accent */
+  border-top: 1px solid #9F8151;
   text-align: center;
   font-size: 0.9rem;
-  color: #EBE1CF; /* Light creamy beige text for copyright */
+  color: #EBE1CF; 
 }
 
 .footer-links {
@@ -118,25 +118,21 @@
 }
 
 .footer-links a {
-  color: #EBE1CF; /* Light creamy beige links */
+  color: #EBE1CF; 
   text-decoration: none;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
-  color: #9F8151; /* Muted brown/gold hover for consistency */
+  color: #9F8151; 
 }
-
-/* Footer.css */
-
-/* ... other footer styles ... */
 
 .contact-section .section-label {
   display: flex;
   align-items: center;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #EBE1CF; /* Light creamy beige for the label */
+  color: #EBE1CF; 
 }
 
 .icon-container {
@@ -146,18 +142,15 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #9F8151; /* Muted brown/gold circle for the icon background */
+  background-color: #9F8151; 
   margin-right: 8px;
 }
 
 .contact-section .icon {
   font-size: 1em;
-  color: #000000; /* Black icon within the brown/gold circle for strong contrast */
+  color: #000000; 
 }
 
-/* ... other footer styles ... */
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;

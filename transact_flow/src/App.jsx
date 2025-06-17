@@ -5,9 +5,9 @@ import About from './pages/About';
 import Solutions from './pages/Solution';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
-import Layout from './components/Layout'; // Adjust path
+import Layout from './components/Layout'; 
 import Signup from './pages/Signup'
-import Blog from './pages/Blog'; // Adjust path
+import Blog from './pages/Blog'; 
 import SignupForm from './pages/Signupform';
 import Signin from './pages/Signin'
 
@@ -25,7 +25,6 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="signup-form" element={<SignupForm />} />
           <Route path="signin" element={<Signin />} />
-          {/* Add more routes as needed */}
         </Route>
       </Routes>
     </BrowserRouter>
