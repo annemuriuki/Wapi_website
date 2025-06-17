@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Signupform.css';
+import { Link } from 'react-router-dom';
 
 function SignupForm() {
   const [showAlert, setShowAlert] = useState(false);
@@ -50,7 +51,7 @@ function SignupForm() {
         </form>
 
         <p className="login-link">
-          Already have an account? <a href="./signin" className="login-text">Log In</a>
+          Already have an account? <Link to="/signin" className="login-text">Log In</Link>
         </p>
       </div>
     </div>
