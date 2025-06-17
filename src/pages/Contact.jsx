@@ -69,7 +69,7 @@ const handleSubmit = (e) => {
       <div className="contact-form-container">
         <div className="form-header">
           <p className="get-in-touch">GET IN TOUCH</p>
-          <h2 className="reach-out">Let's Discuss Your Project <span className="today-accent">Today</span></h2>
+          <h2 className="reach-out">Bring Your Ideas to Life With Us  <span className="today-accent">Today</span></h2>
           <p className="form-description">Share your vision with us, and our experts will help you craft the perfect solution. We look forward to hearing from you.</p> {/* Updated Description */}
         </div>
         <form onSubmit={handleSubmit} className="contact-form">
@@ -122,9 +122,9 @@ const handleSubmit = (e) => {
               required
             ></textarea>
           </div><br />
-          <button type="submit" className="submit-button">
-            Send Message
-          </button>
+          <div className="button-wrapper">
+            <button type="submit" className="submit-button">Send Message</button>
+          </div>
         </form>
       </div>
     </div>
