@@ -42,7 +42,7 @@ function About() {
             <h3 className="block-title">Vision</h3>
             <ul className="block-list">
               <li className="block-list-item">To be the global leader in transformative digital solutions.</li>
-              <li className="block-list-item">Empowering businesses through unparalleled technological advancement.</li>
+              <li className="block-list-item">Empowering businesses with cutting-edge technology.</li>
               <li className="block-list-item">Fostering a future where innovation drives sustainable growth.</li>
               <li className="block-list-item">Creating seamless, impactful experiences for every client.</li>
             </ul>
@@ -51,7 +51,10 @@ function About() {
             <h3 className="block-title">Mission</h3>
             <ul className="block-list">
               <li className="block-list-item">
-                Our mission is to deliver innovative and strategic solutions that empower our clients to achieve their most ambitious goals. We strive to build lasting partnerships based on trust, expertise, and a shared commitment to excellence.
+                Our mission is to deliver innovative and strategic solutions that empower our clients to achieve their most ambitious goals. 
+              </li>
+              <li className='block-list-item'>
+                We strive to build lasting partnerships based on trust, expertise, and a shared commitment to excellence.
               </li>
             </ul>
           </div>

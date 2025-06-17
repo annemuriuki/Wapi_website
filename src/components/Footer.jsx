@@ -114,7 +114,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p className="copyright">
-          &copy; 2025 [Your Company Name]. All rights reserved.
+          &copy; 2025 TransactFlow. All rights reserved.
         </p>
         <div className="footer-links">
           <a href="/terms">Terms of Service</a>
