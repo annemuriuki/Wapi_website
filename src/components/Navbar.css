@@ -217,3 +217,41 @@
     display: none;
   }
 }
+
+/* Enhance mobile menu button styling */
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(16, 55, 19, 0.2);
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    color: #103713;
+    z-index: 101;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-menu-button:hover, 
+  .mobile-menu-button:focus {
+    background-color: rgba(16, 55, 19, 0.1);
+  }
+  
+  /* Add a subtle animation for better user feedback */
+  .mobile-menu-button svg {
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-menu-button:active svg {
+    transform: scale(0.9);
+  }
+  
+  /* Ensure the dropdown appears above other content */
+  .navbar-links-container.active {
+    z-index: 100;
+  }
+}
