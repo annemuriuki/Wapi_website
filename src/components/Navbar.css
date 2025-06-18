@@ -148,6 +148,72 @@
     color: #628B35; 
 }
 
+@media (max-width: 768px) {
+  .custom-navbar {
+    background-color: #FFFFFF;
+    padding: 0.8rem 1rem;
+    position: relative;
+    z-index: 1000; 
+  }
+
+  .navbar-links-container {
+    display: none;
+  }
+  
+  .navbar-links-container.active {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #E2DBD0;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+  }
+  
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .navbar-link {
+    padding: 0.8rem 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-right {
+    display: none;
+  }
+  
+  .navbar-right.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .navbar-sign-up, .navbar-sign-in {
+    width: 100%;
+    margin: 0.5rem 0;
+    text-align: center;
+    padding: 0.8rem;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
+  }
+}
+
 @media (min-width: 769px) {
   .mobile-menu-button {
     display: none;
@@ -156,32 +222,36 @@
 
 @media (max-width: 768px) {
   .mobile-menu-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(16, 55, 19, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    color: #103713;
     z-index: 1002;
+    position: relative;
+    transition: background-color 0.3s ease;
   }
-
-  .mobile-menu-button:hover,
+  
+  .mobile-menu-button:hover, 
   .mobile-menu-button:focus {
     background-color: rgba(16, 55, 19, 0.1);
   }
-
+  
+  /* Add a subtle animation for better user feedback */
   .mobile-menu-button svg {
     transition: transform 0.3s ease;
   }
-
+  
   .mobile-menu-button:active svg {
     transform: scale(0.9);
   }
-
+  
+  /* Ensure the dropdown appears above other content */
   .navbar-links-container.active {
     position: absolute;
     top: 100%;
