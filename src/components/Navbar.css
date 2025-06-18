@@ -151,10 +151,12 @@
 /* Mobile navigation styles */
 @media (max-width: 768px) {
   .custom-navbar {
+    background-color: #FFFFFF;
     padding: 0.8rem 1rem;
     position: relative;
+    z-index: 1000; 
   }
-  
+
   .navbar-links-container {
     display: none; /* Hide on mobile by default */
   }
@@ -169,7 +171,7 @@
     flex-direction: column;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    z-index: 1001;
   }
   
   .navbar-links {
@@ -209,6 +211,7 @@
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 1002;
   }
 }
 
@@ -221,11 +224,11 @@
 /* Enhance mobile menu button styling */
 @media (max-width: 768px) {
   .mobile-menu-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(16, 55, 19, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(16, 55, 19, 0.2);
     border-radius: 4px;
     padding: 8px;
     min-width: 44px;
@@ -252,6 +255,11 @@
   
   /* Ensure the dropdown appears above other content */
   .navbar-links-container.active {
-    z-index: 100;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1001;
   }
 }
