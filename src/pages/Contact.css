@@ -58,6 +58,32 @@
 }
 
 
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.email .icon {
+  background-color: #9F8151; 
+  color: #000000; 
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.email h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #FFFFFF; 
+}
+
+
 .contact-form-container {
   background-color: #FFFFFF; 
   padding: 40px;
@@ -139,6 +165,7 @@
   font-size: 16px;
   background-color: #FFFFFF; 
   color: #000000; 
+}
 
 .form-group textarea {
   padding: 10px;
@@ -236,5 +263,4 @@
     top: 0;
     pointer-events: none;
   }
-}
 }

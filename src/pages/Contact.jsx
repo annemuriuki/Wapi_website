@@ -9,6 +9,7 @@ function Contact() {
     subject: '',
     message: '',
   });
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,23 +19,25 @@ function Contact() {
     }));
   };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const alertDiv = document.createElement('div');
-  alertDiv.className = 'custom-alert';
-  alertDiv.textContent = 'Thank you for getting in touch with us. We will get back to you shortly!';
-  
-  document.body.appendChild(alertDiv);
-  setTimeout(() => {
-    alertDiv.remove();
-  }, 4000);
+    setShowSuccessMessage(true);
 
-  setFormData({ name: '', email: '', subject: '', message: '' });
-};
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 4000);
+    
+    setFormData({ name: '', email: '', subject: '', message: '' });
+  };
 
   return (
     <div className="contact-container">
+      {showSuccessMessage && (
+        <div className="custom-alert">
+          Thank you for getting in touch with us. We will get back to you shortly!
+        </div>
+      )}
       <div className="contact-info">
         <h2>Connect With Our Team</h2> 
         <p>Our dedicated team is ready to provide the insights and support you need.</p> 
