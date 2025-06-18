@@ -262,17 +262,3 @@
   }
 }
 
-@media (max-width: 768px) {
-  .navbar-logo {
-    font-size: 1.2rem; /* smaller logo text on mobile */
-    max-width: 60%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .navbar-logo-image {
-    height: 30px; /* slightly smaller image */
-    margin-right: 0.4rem;
-  }
-}
