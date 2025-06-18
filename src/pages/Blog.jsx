@@ -1,5 +1,6 @@
 // Blog.jsx
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Blog.css'; 
 import Viewblog from './Viewblog'; 
 import blogImage1 from '../assets/blog1.jpeg';
@@ -39,7 +40,7 @@ const BlogCard = ({ blog, onReadMore }) => {
                     onClick={() => onReadMore(blog.id)} 
                     className="read-more-button"
                 >
-                    Read More &gt;
+                    Read More 
                 </button>
             </div>
         </div>
@@ -48,6 +49,7 @@ const BlogCard = ({ blog, onReadMore }) => {
 
 const Blog = () => {
     const [selectedBlog, setSelectedBlog] = useState(null);
+    const location = useLocation();
 
     const staticBlogs = [
         {
@@ -83,6 +85,19 @@ const Blog = () => {
             image: blogImage4,
         },
     ];
+
+    useEffect(() => {
+        const queryParams = new URLSearchParams(location.search);
+        const blogId = queryParams.get('blogId');
+        
+        if (blogId) {
+            const id = parseInt(blogId, 10);
+            const blogToView = staticBlogs.find(blog => blog.id === id);
+            if (blogToView) {
+                setSelectedBlog(blogToView);
+            }
+        }
+    }, [location.search]);
 
     const handleReadMore = (id) => {
         const blogToView = staticBlogs.find(blog => blog.id === id);

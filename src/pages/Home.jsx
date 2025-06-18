@@ -1,3 +1,4 @@
+// Home.jsx
 import React from 'react';
 import './Home.css'; 
 import { Link } from 'react-router-dom';
@@ -18,11 +19,10 @@ import logo4 from '../assets/logo4.png';
 import strategicConsultingIcon from '../assets/StrategicConsulting .jpg';
 import perfomanceOptimizationIcon from '../assets/PerfomanceOptimization .jpg';
 import digitalTransformationIcon from '../assets/DigitalTransformation  .jpg';
-
-
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
-
+  const navigate = useNavigate();
   const sliderRef = useRef(null);
   const settings = {
     dots: true,
@@ -58,7 +58,6 @@ function Home() {
     { id: 6, src: logo2 },
     { id: 7, src: logo3 },
     { id: 10, src: logo4 },
-
   ];
 
   const sampleBlogs = [
@@ -94,6 +93,10 @@ function Home() {
     },
   ];
 
+  const handleBlogClick = (blogId) => {
+    navigate(`/blog?blogId=${blogId}`);
+  };
+  
   return (
     <div className="home-container">
       <div className="home-section">
@@ -107,8 +110,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Features Section */}
-        <div className="features-section">
+      <div className="features-section">
         <div className="feature-card">
           <img src={strategicConsultingIcon} alt="Strategic Consulting" className="feature-icon" />
           <h3 className="feature-title">Strategic Consulting</h3>
@@ -126,9 +128,6 @@ function Home() {
         </div>
       </div>
 
-      
-    
-      {/* "Why Choose Us?" Section */}
       <div className="full-width-hanging-blocks-section">
         <div className="full-width-content-area">
           <div className="full-width-image-container">
@@ -146,17 +145,17 @@ function Home() {
             <div className="full-width-hanging-blocks-list">
               <div className="full-width-hanging-block-item">
                 <div className="green-accent"></div>
-                <span className="benefit-icon">&#10003;</span> 
+                <span className="benefit-icon">✓</span> 
                 <p className="benefit-text"><strong>Expert-Led Team</strong><br />Benefit from the collective wisdom of seasoned professionals, each a leader in their respective field.</p>
               </div>
               <div className="full-width-hanging-block-item">
                 <div className="green-accent"></div>
-                <span className="benefit-icon">&#10003;</span> 
+                <span className="benefit-icon">✓</span> 
                 <p className="benefit-text"><strong>Tailored Strategies</strong><br />We craft bespoke solutions that align perfectly with your unique objectives and organizational culture.</p>
               </div>
               <div className="full-width-hanging-block-item">
                 <div className="green-accent"></div>
-                <span className="benefit-icon">&#10003;</span> 
+                <span className="benefit-icon">✓</span> 
                 <p className="benefit-text"><strong>Client-Centric Approach</strong><br />Your goals are our priority. We foster collaborative partnerships for mutual growth.</p>
               </div>
             </div>
@@ -164,7 +163,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Blog Section */}
       <div className="blog-section">
         <div className="blog-header">
           <h2>Uncover the Latest Insights</h2>
@@ -174,31 +172,28 @@ function Home() {
         </div>
         <div className="blog-list">
           {sampleBlogs.map((blog) => (
-            <div key={blog.id} className="blog-card">
-              <Link to={blog.link}>
-                <div className="blog-image-container">
-                  <img src={blog.image} alt={blog.title} className="blog-image" />
-                </div>
-                <div className="blog-content">
-                  <h3 className="blog-title">{blog.title}</h3>
-                  <div className="blog-meta">
-                    <div className="author-info">
-                      <img src={blog.authorImage} alt={blog.author} className="author-image" /> 
-                      <span className="author-name"><strong>{blog.author}</strong></span>
-                    </div>
-                  </div>
-                  <p className="blog-excerpt">{blog.excerpt}</p>
-                  <div className="blog-date">
-                    <span className="date"><strong>{blog.date}</strong></span>
+            <div key={blog.id} className="blog-card" onClick={() => handleBlogClick(blog.id)}>
+              <div className="blog-image-container">
+                <img src={blog.image} alt={blog.title} className="blog-image" />
+              </div>
+              <div className="blog-content">
+                <h3 className="blog-title">{blog.title}</h3>
+                <div className="blog-meta">
+                  <div className="author-info">
+                    <img src={blog.authorImage} alt={blog.author} className="author-image" /> 
+                    <span className="author-name"><strong>{blog.author}</strong></span>
                   </div>
                 </div>
-              </Link>
+                <p className="blog-excerpt">{blog.excerpt}</p>
+                <div className="blog-date">
+                  <span className="date"><strong>{blog.date}</strong></span>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Slider for Client Logos */}
       <div className="our-clients-section">
         <h2>Trusted By</h2>
         <Slider {...settings} ref={sliderRef}>
@@ -209,7 +204,6 @@ function Home() {
           ))}
         </Slider>
       </div>
-
     </div>
   );
 }
