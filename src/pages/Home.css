@@ -701,50 +701,35 @@ body {
   }
 }
 
-/* Small mobile devices */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.8em;
+/* Add these to your existing media queries in Home.css */
+@media (max-width: 768px) {
+  .slick-slide > div {
+    margin: 0 20px; /* Reduce margin on mobile */
   }
   
-  .feature-title {
-    font-size: 1.3em;
+  .blog-list {
+    padding: 15px; /* Reduce padding on mobile */
   }
   
-  .full-width-section-heading {
-    font-size: 1.5em;
+  .full-width-hanging-blocks-section {
+    padding: 40px 20px; /* Reduce padding on mobile */
   }
   
-  .blog-title {
-    font-size: 1.2em;
+  .full-width-hanging-block-item {
+    padding: 15px 20px 15px 25px; /* Adjust padding for better mobile display */
   }
 }
 
+/* Fix touch target sizes for better mobile experience */
 @media (max-width: 768px) {
-  button, 
+  .navbar-link, 
+  .navbar-sign-up, 
+  .navbar-sign-in,
   .blog-button,
-  .read-more-button,
-  .blog-card,
-  .feature-card {
+  .app-button {
     min-height: 44px;
-  }
-
-  .blog-card,
-  .feature-card {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .hero-realistic-image,
-  .blog-image,
-  .feature-icon {
-    width: 100%;
-    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

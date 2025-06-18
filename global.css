@@ -1,0 +1,32 @@
+/* global.css */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
+/* Ensure all interactive elements have adequate touch targets */
+button, 
+a, 
+input[type="button"], 
+input[type="submit"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Ensure images don't overflow their containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for Android Chrome address bar resizing issues */
+@media screen and (max-width: 768px) {
+  body {
+    height: auto !important;
+  }
+}
