@@ -187,6 +187,7 @@
     padding: 0.8rem 1rem;
     position: relative;
     z-index: 1000;
+    overflow: visible;
   }
 
   .navbar-left {
@@ -247,11 +248,12 @@
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 2000;
+    z-index: 9999;
     position: fixed;
-    top: 18px;
-    right: 18px;
-    background-color: rgba(255, 255, 255, 0.8);
+    top: 0;
+    right: 0;
+    margin: 18px;
+    background-color: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(16, 55, 19, 0.4);
     display: flex;
     align-items: center;
@@ -262,6 +264,12 @@
     min-height: 44px;
     color: #103713;
     transition: background-color 0.3s ease;
+    -webkit-position: fixed;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
   .mobile-menu-button:hover,
@@ -275,6 +283,12 @@
 
   .mobile-menu-button:active svg {
     transform: scale(0.9);
+  }
+
+  /* Ensure the button stays fixed on Android */
+  .mobile-menu-button {
+    position: fixed !important;
+    -webkit-position: fixed !important;
   }
 }
 
