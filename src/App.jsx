@@ -11,10 +11,12 @@ import Signup from './pages/Signup'
 import Blog from './pages/Blog'; 
 import SignupForm from './pages/Signupform';
 import Signin from './pages/Signin'
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} /> 
