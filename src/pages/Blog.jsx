@@ -89,7 +89,7 @@ const Blog = () => {
     useEffect(() => {
         const queryParams = new URLSearchParams(location.search);
         const blogId = queryParams.get('blogId');
-        
+
         if (blogId) {
             const id = parseInt(blogId, 10);
             const blogToView = staticBlogs.find(blog => blog.id === id);
@@ -98,6 +98,13 @@ const Blog = () => {
             }
         }
     }, [location.search]);
+
+    // Scroll to top when selectedBlog changes
+    useEffect(() => {
+        if (selectedBlog) {
+            window.scrollTo(0, 0);
+        }
+    }, [selectedBlog]);
 
     const handleReadMore = (id) => {
         const blogToView = staticBlogs.find(blog => blog.id === id);
