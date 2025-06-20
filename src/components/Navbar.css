@@ -163,6 +163,11 @@
 
 /* --- MOBILE STYLES --- */
 @media (max-width: 768px) {
+  /* Add padding to the main content to account for the fixed navbar */
+  main.flex-grow {
+    padding-top: 70px; /* Adjust this value based on the navbar height */
+  }
+
   .desktop-only {
     display: none !important;
   }
@@ -185,7 +190,11 @@
   .custom-navbar {
     background-color: #FFFFFF;
     padding: 0.8rem 1rem;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 1000;
     overflow: visible;
   }
@@ -201,8 +210,8 @@
 
   .navbar-links-container.active {
     display: flex;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 70px; /* Match the navbar height */
     left: 0;
     right: 0;
     background-color: #E2DBD0;
@@ -250,9 +259,8 @@
     cursor: pointer;
     z-index: 9999;
     position: fixed;
-    top: 0;
-    right: 0;
-    margin: 18px;
+    top: 13px; /* Adjusted to align with the navbar */
+    right: 10px;
     background-color: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(16, 55, 19, 0.4);
     display: flex;
