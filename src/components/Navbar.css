@@ -250,7 +250,6 @@
   }
 }
 
-/* Hide mobile menu button on desktop */
 @media (min-width: 769px) {
   .mobile-menu-button {
     display: none;
