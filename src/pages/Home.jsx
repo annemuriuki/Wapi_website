@@ -1,24 +1,24 @@
 // Home.jsx
 import React from 'react';
-import './Home.css'; 
+import '../styles/pages/Home.css'; 
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useRef } from 'react';
-import HeroImage from '../assets/hero_image.jpeg'; 
-import about  from '../assets/about.jpeg'; 
-import blogImage1 from '../assets/blog1.jpeg'; 
-import blogImage2 from '../assets/blog2.jpeg'; 
-import blogImage3 from '../assets/blog3.jpeg';
-import authorImage from '../assets/author.jpeg'; 
-import logo1 from '../assets/logo1.png';
-import logo2 from '../assets/logo2.png';
-import logo3 from '../assets/logo3.png';
-import logo4 from '../assets/logo4.png';
-import strategicConsultingIcon from '../assets/StrategicConsulting .jpg';
-import perfomanceOptimizationIcon from '../assets/PerfomanceOptimization .jpg';
-import digitalTransformationIcon from '../assets/DigitalTransformation  .jpg';
+import HeroImage from '../assets/images/hero/hero_image.jpeg'; 
+import about from '../assets/images/about/about.jpeg'; 
+import blogImage1 from '../assets/images/blog/blog1.jpeg'; 
+import blogImage2 from '../assets/images/blog/blog2.jpeg'; 
+import blogImage3 from '../assets/images/blog/blog3.jpeg';
+import authorImage from '../assets/images/blog/author.jpeg'; 
+import logo1 from '../assets/images/logos/logo1.png';
+import logo2 from '../assets/images/logos/logo2.png';
+import logo3 from '../assets/images/logos/logo3.png';
+import logo4 from '../assets/images/logos/logo4.png';
+import strategicConsultingIcon from '../assets/images/icons/StrategicConsulting .jpg';
+import perfomanceOptimizationIcon from '../assets/images/icons/PerfomanceOptimization .jpg';
+import digitalTransformationIcon from '../assets/images/icons/DigitalTransformation  .jpg';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {

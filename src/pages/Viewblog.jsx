@@ -1,6 +1,6 @@
 // Viewblog.jsx
 import React, { useState } from 'react';
-import './Viewblog.css'; 
+import '../styles/pages/Viewblog.css'; 
 
 const Viewblog = ({ blog, onBackToList }) => {
     const [reviews, setReviews] = useState([]);
