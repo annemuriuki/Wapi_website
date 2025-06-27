@@ -1,8 +1,8 @@
 import React from 'react';
-import './Solution.css';
+import '../styles/pages/Solution.css';
 import { Link } from 'react-router-dom';
 import { FaGlobe, FaBuilding, FaUsers } from 'react-icons/fa'; 
-import professionalImage from '../assets/reachus.jpeg';
+import professionalImage from '../assets/images/about/reachus.jpeg';
 
 const Solution = () => {
   const solutions = [

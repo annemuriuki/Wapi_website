@@ -2,7 +2,7 @@ import React from "react";
 import { FaGooglePlay } from "react-icons/fa";
 import { SiAppstore } from "react-icons/si";
 import { MdLocationOn, MdPhone, MdEmail, MdMailOutline } from "react-icons/md";
-import "./Footer.css"; 
+import "../styles/components/Footer.css"; 
 
 const Footer = () => {
   const playStoreLink = "#"; 

@@ -1,12 +1,12 @@
 // Blog.jsx
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import './Blog.css'; 
+import '../styles/pages/Blog.css'; 
 import Viewblog from './Viewblog'; 
-import blogImage1 from '../assets/blog1.jpeg';
-import blogImage2 from '../assets/blog2.jpeg';
-import blogImage3 from '../assets/blog3.jpeg';
-import blogImage4 from '../assets/blog4.jpeg';
+import blogImage1 from '../assets/images/blog/blog1.jpeg';
+import blogImage2 from '../assets/images/blog/blog2.jpeg';
+import blogImage3 from '../assets/images/blog/blog3.jpeg';
+import blogImage4 from '../assets/images/blog/blog4.jpeg';
 
 const BlogHeader = () => (
     <div className="blog-header-container">
