@@ -1,10 +1,10 @@
 import React from 'react';
-import './About.css';
-import aboutImage from '../assets/aboutpage.jpeg';
-import member1 from '../assets/member1.jpeg';
-import member2 from '../assets/member2.jpeg';
-import member3 from '../assets/member3.jpeg';
-import member4 from '../assets/member4.jpeg';
+import '../styles/pages/About.css';
+import aboutImage from '../assets/images/about/aboutpage.jpeg';
+import member1 from '../assets/images/team/member1.jpeg';
+import member2 from '../assets/images/team/member2.jpeg';
+import member3 from '../assets/images/team/member3.jpeg';
+import member4 from '../assets/images/team/member4.jpeg';
 
 import { FaLinkedinIn } from 'react-icons/fa'; 
 import { SiGmail } from 'react-icons/si';  

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Signupform.css';
+import '../styles/pages/Signupform.css';
 import { Link } from 'react-router-dom';
 
 function SignupForm() {
