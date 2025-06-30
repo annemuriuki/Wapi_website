@@ -16,7 +16,7 @@ const Viewblog = ({ blog, onBackToList }) => {
         );
     }
 
-    const formattedDate = new Date(blog.created_at).toLocaleDateString(undefined, {
+    const formattedDate = new Date(blog.date).toLocaleDateString(undefined, {
         year: 'numeric',
         month: 'long',
         day: 'numeric',

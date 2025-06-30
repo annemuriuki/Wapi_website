@@ -20,6 +20,7 @@ import strategicConsultingIcon from '../assets/images/icons/StrategicConsulting 
 import perfomanceOptimizationIcon from '../assets/images/icons/PerfomanceOptimization .jpg';
 import digitalTransformationIcon from '../assets/images/icons/DigitalTransformation  .jpg';
 import { useNavigate } from 'react-router-dom';
+import blogPosts from '../data/blogPosts.json';
 
 function Home() {
   const navigate = useNavigate();
@@ -70,39 +71,6 @@ function Home() {
     { id: 6, src: logo2 },
     { id: 7, src: logo3 },
     { id: 10, src: logo4 },
-  ];
-
-  const sampleBlogs = [
-    {
-      id: 1,
-      title: 'The Future of AI in Business: A Strategic Outlook',
-      excerpt: 'Explore how artificial intelligence is reshaping industry landscapes and learn actionable strategies for integrating AI into your operations to drive efficiency and innovation...',
-      image: blogImage2, 
-      link: '/blog/ai-in-business',
-      author: 'Expert Contributor', 
-      authorImage: authorImage, 
-      date: '2025-05-15',
-    },
-    {
-      id: 2,
-      title: '5 Essential Strategies for Digital Marketing Success in 2025',
-      excerpt: 'Discover the key tactics that will elevate your online presence and engage your target audience effectively in today\'s dynamic digital landscape...',
-      image: blogImage1,
-      link: '/blog/digital-marketing-2025',
-      author: 'Industry Analyst', 
-      authorImage: authorImage, 
-      date: '2025-04-28',
-    },
-    {
-      id: 3,
-      title: 'Navigating Global Markets: A Guide for Emerging Businesses',
-      excerpt: 'Understand the nuances of international expansion and learn how to position your business for success in diverse global markets...',
-      image: blogImage3, 
-      link: '/blog/global-markets-guide',
-      author: 'Growth Specialist', 
-      authorImage: authorImage, 
-      date: '2025-04-01',
-    },
   ];
 
   const handleBlogClick = (blogId) => {
@@ -183,7 +151,7 @@ function Home() {
           </Link>
         </div>
         <div className="blog-list">
-          {sampleBlogs.map((blog) => (
+          {blogPosts.map((blog) => (
             <div key={blog.id} className="blog-card" onClick={() => handleBlogClick(blog.id)}>
               <div className="blog-image-container">
                 <img src={blog.image} alt={blog.title} className="blog-image" />
@@ -192,8 +160,7 @@ function Home() {
                 <h3 className="blog-title">{blog.title}</h3>
                 <div className="blog-meta">
                   <div className="author-info">
-                    <img src={blog.authorImage} alt={blog.author} className="author-image" /> 
-                    <span className="author-name"><strong>{blog.author}</strong></span>
+                    <span className="author-name">By {blog.author}</span>
                   </div>
                 </div>
                 <p className="blog-excerpt">{blog.excerpt}</p>
