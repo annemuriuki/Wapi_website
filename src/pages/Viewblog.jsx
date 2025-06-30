@@ -38,33 +38,33 @@ const Viewblog = ({ blog, onBackToList }) => {
 
     return (
         <div className="view-blog-page-layout">
-            <div className="main-blog-content-left"> 
-                <div className="view-blog-image-wrapper">
+            <div className="main-blog-content-left">
+                <div className="view-blog-hero-image-wrapper">
                     <img
                         src={blog.image || 'https://placehold.co/1000x400/EBE1CF/0A4834?text=Blog+Post+Image'}
                         alt={blog.title}
-                        className="view-blog-main-image"
+                        className="view-blog-hero-image"
                     />
-                </div>
-
-                <div className="post-details-section">
-                    <h2 className="post-details-title">Post Details</h2>
-                    <div className="post-meta-info" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                        <span className="blog-date">Date: {formattedDate}</span>
-                        <span>Written by: </span>
-                        <img src="/images/blog/author.jpeg" alt={blog.author} className="author-image" />
-                        <span className="author-name-detail">{blog.author}</span>
+                    <div className="view-blog-hero-overlay">
+                        <h1 className="view-blog-title">{blog.title}</h1>
+                        <div className="view-blog-author-box">
+                            <img src="/images/blog/author.jpeg" alt={blog.author} className="author-image" />
+                            <div>
+                                <span className="author-name-detail">{blog.author}</span>
+                                <span className="blog-date">{formattedDate}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div className="view-blog-content">
-                    {blog.content.split('\n').map((paragraph, index) => (
-                        <p key={index} className="blog-full-paragraph">{paragraph}</p>
-                    ))}
+                <div className="view-blog-content-card">
+                    <div className="view-blog-content">
+                        {blog.content.split('\n').map((paragraph, index) => (
+                            <p key={index} className="blog-full-paragraph">{paragraph}</p>
+                        ))}
+                    </div>
                 </div>
                 <button onClick={onBackToList} className="back-button">Back to Blog List</button>
             </div>
-
             <div className="main-blog-content-right">
                 <div className="review-section">
                     <h3 className="review-title">Add a Review</h3>
@@ -81,16 +81,18 @@ const Viewblog = ({ blog, onBackToList }) => {
                         </button>
                     </div>
                 </div>
-
                 {reviews.length > 0 && (
                     <div className="posted-reviews-section">
                         <h3 className="posted-reviews-title">Reviews ({reviews.length})</h3>
                         {reviews.map((review) => (
-                            <div key={review.id} className="single-review-item">
-                                <p className="review-text">"{review.text}"</p>
-                                <p className="review-author-date">
-                                    - {review.author} on {new Date(review.created_at).toLocaleDateString()}
-                                </p>
+                            <div key={review.id} className="single-review-item enhanced-review-bubble">
+                                <div className="review-avatar-enhanced">{review.author[0]}</div>
+                                <div>
+                                    <p className="review-text">"{review.text}"</p>
+                                    <p className="review-author-date">
+                                        - {review.author} on {new Date(review.created_at).toLocaleDateString()}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>
