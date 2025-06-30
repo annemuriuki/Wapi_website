@@ -15,7 +15,6 @@
 }
 
 .blog-header h2 {
-  font-family: var(--font-heading);
   font-size: 2.5rem;
   color: #333;
   margin: 0;
@@ -78,7 +77,6 @@
 }
 
 .blog-title {
-  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -106,13 +104,11 @@
 }
 
 .author-name {
-  font-family: var(--font-body);
   font-size: 0.9rem;
   color: #555;
 }
 
 .blog-excerpt {
-  font-family: var(--font-body);
   color: #666;
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -120,7 +116,6 @@
 }
 
 .blog-date {
-  font-family: var(--font-body);
   font-size: 0.85rem;
   color: #888;
 }

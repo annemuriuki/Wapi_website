@@ -1,26 +1,4 @@
 /* global.css */
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
-
-/* CSS Custom Properties for Font Hierarchy */
-:root {
-  /* Body text - Inter */
-  --font-body: 'Inter', sans-serif;
-  --font-body-regular: 'Inter', sans-serif;
-  --font-body-semibold: 'Inter', sans-serif;
-  --font-body-bold: 'Inter', sans-serif;
-  
-  /* Headings - Source Code Pro */
-  --font-heading: 'Source Code Pro', monospace;
-  --font-heading-regular: 'Source Code Pro', monospace;
-  --font-heading-semibold: 'Source Code Pro', monospace;
-  --font-heading-bold: 'Source Code Pro', monospace;
-  
-  /* Numbers - Source Code Pro (for consistent number display) */
-  --font-number: 'Source Code Pro', monospace;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -29,20 +7,6 @@ html, body {
   overflow-x: hidden;
   width: 100%;
   -webkit-text-size-adjust: 100%; 
-  font-family: var(--font-body);
-  font-weight: 400;
-}
-
-/* Default heading styles */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-}
-
-/* Number elements */
-.number, .stat-number, .price, .count {
-  font-family: var(--font-number);
-  font-weight: 600;
 }
 
 button, 

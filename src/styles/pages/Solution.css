@@ -1,5 +1,5 @@
 .solutions-page {
-    font-family: var(--font-body);
+    font-family: 'Arial', sans-serif;
     color: #0A4834;
     background-color: #EBE1CF;
     padding: 80px 20px;
@@ -15,7 +15,6 @@
 }
 
 .header-content h1 {
-    font-family: var(--font-heading);
     font-size: 2.6em;
     margin-bottom: 10px;
     font-weight: bold;
@@ -23,7 +22,6 @@
 }
 
 .header-content p {
-    font-family: var(--font-body);
     font-size: 1em;
     color: #EBE1CF;
 }
@@ -38,7 +36,6 @@
 }
 
 .solutions-overview h2 {
-    font-family: var(--font-heading);
     font-size: 2em;
     text-align: left;
     margin-bottom: 40px;
@@ -81,7 +78,6 @@
 }
 
 .solution-header h3 {
-    font-family: var(--font-heading);
     font-size: 1.3em;
     color: #0A4834; 
     font-weight: bold;
@@ -89,7 +85,6 @@
 }
 
 .solution-details {
-    font-family: var(--font-body);
     color: #000000; 
     font-size: 0.95em;
     line-height: 1.6;
@@ -161,7 +156,6 @@
 }
 
 .our-professionals {
-    font-family: var(--font-body);
     font-size: 0.8em;
     color: #9F8151; 
     margin-bottom: 6px;
@@ -169,7 +163,6 @@
 }
 
 .transform-question {
-    font-family: var(--font-heading);
     font-size: 1.6em;
     font-weight: bold;
     margin-bottom: 20px;
@@ -178,7 +171,6 @@
 }
 
 .contact-us-button {
-    font-family: var(--font-body);
     background-color: #9F8151; 
     color: #000000;
     border: none;

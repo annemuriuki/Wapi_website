@@ -50,7 +50,6 @@
 }
 
 .feature-title {
-  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -58,7 +57,6 @@
 }
 
 .feature-description {
-  font-family: var(--font-body);
   color: #666;
   line-height: 1.6;
 }

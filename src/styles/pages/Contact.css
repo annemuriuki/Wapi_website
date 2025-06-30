@@ -4,7 +4,6 @@
   background-color: #EBE1CF; 
   padding: 40px;
   align-items: center; 
-  font-family: var(--font-body);
 }
 
 .contact-info {
@@ -19,14 +18,12 @@
 }
 
 .contact-info h2 {
-  font-family: var(--font-heading);
   font-size: 24px;
   margin-bottom: 10px;
   color: #FFFFFF; 
 }
 
 .contact-info p {
-  font-family: var(--font-body);
   margin-bottom: 20px;
   line-height: 1.6;
   color: #EBE1CF;
@@ -55,7 +52,6 @@
 
 .office h3,
 .phone h3 {
-  font-family: var(--font-heading);
   font-size: 18px;
   margin-bottom: 5px;
   color: #FFFFFF; 
@@ -82,7 +78,6 @@
 }
 
 .email h3 {
-  font-family: var(--font-heading);
   font-size: 18px;
   margin-bottom: 5px;
   color: #FFFFFF; 
@@ -103,7 +98,6 @@
 }
 
 .get-in-touch {
-  font-family: var(--font-body);
   color: #9F8151; 
   font-size: 14px;
   font-weight: bold;
@@ -111,7 +105,6 @@
 }
 
 .reach-out {
-  font-family: var(--font-heading);
   font-size: 28px;
   color: #0A4834; 
   margin-bottom: 10px;
@@ -132,7 +125,6 @@
 }
 
 .form-description {
-  font-family: var(--font-body);
   color: #000000; 
   line-height: 1.6;
   font-size: 16px;
@@ -158,7 +150,6 @@
 }
 
 .form-group label {
-  font-family: var(--font-body);
   margin-bottom: 5px;
   color: #0A4834; 
   font-weight: bold;
@@ -168,7 +159,6 @@
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="tel"] {
-  font-family: var(--font-body);
   padding: 10px;
   border: 1px solid #9F8151; 
   border-radius: 4px;
@@ -178,7 +168,6 @@
 }
 
 .form-group textarea {
-  font-family: var(--font-body);
   padding: 10px;
   border: 1px solid #9F8151;
   border-radius: 4px;
@@ -189,7 +178,6 @@
 }
 
 .submit-button {
-  font-family: var(--font-body);
   background-color: #9F8151; 
   color: #000000; 
   padding: 12px 20px;

@@ -6,7 +6,7 @@
     background: linear-gradient(135deg, #EBE1CF 0%, #9F8151 100%); 
     padding: 20px;
     box-sizing: border-box;
-    font-family: var(--font-body); 
+    font-family: 'Roboto', sans-serif; 
 }
 
 .signin-card {
@@ -21,7 +21,6 @@
 }
 
 .signin-card-title {
-    font-family: var(--font-heading);
     font-size: 2.6em; 
     font-weight: bold;
     color: #0A4834;
@@ -32,7 +31,6 @@
 }
 
 .signin-card-subtitle {
-    font-family: var(--font-body);
     font-size: 1.1em; 
     color: #000000;
     opacity: 0.7;
