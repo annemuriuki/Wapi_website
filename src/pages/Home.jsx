@@ -8,10 +8,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useRef } from 'react';
 import HeroImage from '../assets/images/hero/hero_image.jpeg'; 
 import about from '../assets/images/about/about.jpeg'; 
-import blogImage1 from '../assets/images/blog/blog1.jpeg'; 
-import blogImage2 from '../assets/images/blog/blog2.jpeg'; 
-import blogImage3 from '../assets/images/blog/blog3.jpeg';
-import authorImage from '../assets/images/blog/author.jpeg'; 
 import logo1 from '../assets/images/logos/logo1.png';
 import logo2 from '../assets/images/logos/logo2.png';
 import logo3 from '../assets/images/logos/logo3.png';
@@ -160,6 +156,7 @@ function Home() {
                 <h3 className="blog-title">{blog.title}</h3>
                 <div className="blog-meta">
                   <div className="author-info">
+                    <img src="/images/blog/author.jpeg" alt={blog.author} className="author-image" />
                     <span className="author-name">By {blog.author}</span>
                   </div>
                 </div>

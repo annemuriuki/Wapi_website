@@ -13,11 +13,7 @@ const BlogHeader = () => (
 );
 
 const BlogCard = ({ blog, onReadMore }) => {
-    const formattedDate = new Date(blog.date).toLocaleDateString(undefined, {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-    });
+    const formattedDate = new Date(blog.date).toLocaleDateString('en-US');
 
     return (
         <div className="blog-post">
@@ -25,9 +21,10 @@ const BlogCard = ({ blog, onReadMore }) => {
                 <img src={blog.image || 'https://placehold.co/400x250/EBE1CF/0A4834?text=Blog+Image'} alt={blog.title} />
             </div>
             <div className="blog-post-content">
-                <div className="blog-post-meta">
-                    <span>By {blog.author}</span>
-                    <span>{formattedDate}</span>
+                <div className="blog-post-meta" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <img src="/images/blog/author.jpeg" alt={blog.author} className="author-image" />
+                    <span className="author-name">{blog.author}</span>
+                    <span className="blog-date">Date: {formattedDate}</span>
                 </div>
                 <h2 className="blog-post-title">{blog.title}</h2>
                 <p className="blog-post-excerpt">{blog.excerpt}</p>

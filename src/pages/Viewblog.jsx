@@ -16,11 +16,7 @@ const Viewblog = ({ blog, onBackToList }) => {
         );
     }
 
-    const formattedDate = new Date(blog.date).toLocaleDateString(undefined, {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-    });
+    const formattedDate = new Date(blog.date).toLocaleDateString('en-US');
 
     const handlePostReview = () => {
         if (reviewText.trim()) {
@@ -53,10 +49,11 @@ const Viewblog = ({ blog, onBackToList }) => {
 
                 <div className="post-details-section">
                     <h2 className="post-details-title">Post Details</h2>
-                    <div className="post-meta-info">
-                        <span className="post-detail-item">{formattedDate}</span>
-                        <br />
-                        <span className="post-detail-item">Written by <span className="author-name-detail">{blog.author}</span></span>
+                    <div className="post-meta-info" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                        <span className="blog-date">Date: {formattedDate}</span>
+                        <span>Written by: </span>
+                        <img src="/images/blog/author.jpeg" alt={blog.author} className="author-image" />
+                        <span className="author-name-detail">{blog.author}</span>
                     </div>
                 </div>
 

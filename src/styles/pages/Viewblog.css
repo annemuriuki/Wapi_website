@@ -76,6 +76,14 @@ body {
     color: #9F8151; 
 }
 
+.post-meta-info .blog-date,
+.post-meta-info .author-name-detail,
+.post-meta-info span {
+  font-weight: bold;
+  font-size: 1em;
+  color: #9F8151;
+}
+
 .post-detail-item {
     display: inline-block; 
 }
