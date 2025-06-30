@@ -1,8 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../styles/pages/Contact.css';
 import { FaMapMarkerAlt, FaPhone, FaRegEnvelope } from 'react-icons/fa'; 
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('transact_flow', 'template_q02f7dm', form.current, 'wSaLxBsbvYmexQhkl')
+      .then((result) => {
+          setShowSuccessMessage(true);
+          setFormData({ name: '', email: '', subject: '', message: '' });
+          setTimeout(() => setShowSuccessMessage(false), 4000);
+      }, (error) => {
+          alert('Failed to send message, please try again.');
+      });
+  };
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,17 +34,6 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setShowSuccessMessage(true);
-
-    setTimeout(() => {
-      setShowSuccessMessage(false);
-    }, 4000);
-    
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
 
   return (
     <div className="contact-container">
@@ -75,7 +79,7 @@ function Contact() {
           <h2 className="reach-out">Bring Your Ideas to Life With Us  <span className="today-accent">Today</span></h2>
           <p className="form-description">Share your vision with us, and our experts will help you craft the perfect solution. We look forward to hearing from you.</p> {/* Updated Description */}
         </div>
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form  ref={form} onSubmit={sendEmail} className="contact-form">
           <div className="name-fields">
             <div className="form-group">
               <label htmlFor="name">Your Name</label> 
