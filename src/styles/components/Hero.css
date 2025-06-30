@@ -16,6 +16,7 @@
 }
 
 .welcome-text {
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
   color: #4CAF50;
@@ -24,6 +25,7 @@
 }
 
 .hero-title {
+  font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -32,6 +34,7 @@
 }
 
 .hero-subtitle {
+  font-family: var(--font-body);
   font-size: 1.1rem;
   line-height: 1.6;
   color: #666;

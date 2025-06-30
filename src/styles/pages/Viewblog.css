@@ -1,7 +1,7 @@
 /* ViewBlog.css */
 body {
     background-color: #f4f7f6; 
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-body);
     margin: 0;
     padding: 0;
     overflow-x: hidden; 
@@ -62,6 +62,7 @@ body {
 }
 
 .post-details-title {
+    font-family: var(--font-heading);
     font-size: 1.8em;
     font-weight: bold;
     color: #0A4834; 
@@ -69,6 +70,7 @@ body {
 }
 
 .post-meta-info {
+    font-family: var(--font-body);
     display: flex;
     flex-wrap: wrap;
     gap: 15px; 
@@ -81,10 +83,12 @@ body {
 }
 
 .author-name-detail {
+    font-family: var(--font-body);
     font-weight: 500;
 }
 
 .view-blog-content {
+    font-family: var(--font-body);
     line-height: 1.8;
     font-size: 1.1em;
     margin-bottom: 40px;
@@ -105,6 +109,7 @@ body {
 }
 
 .review-title {
+    font-family: var(--font-heading);
     font-size: 1.6em;
     font-weight: bold;
     color: #0A4834;
@@ -124,7 +129,7 @@ body {
     border: 1px solid #EBE1CF;
     border-radius: 8px;
     font-size: 1em;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-body);
     resize: vertical;
     box-sizing: border-box;
     color: #000000;
@@ -141,6 +146,7 @@ body {
 }
 
 .post-message {
+    font-family: var(--font-body);
     color: #0A4834;
     font-weight: bold;
     text-align: center;
@@ -149,6 +155,7 @@ body {
 }
 
 .post-review-button {
+    font-family: var(--font-body);
     background-color: #0A4834;
     color: #FFFFFF;
     padding: 12px 25px;
@@ -176,6 +183,7 @@ body {
 }
 
 .posted-reviews-title {
+    font-family: var(--font-heading);
     font-size: 1.6em;
     font-weight: bold;
     color: #0A4834;
@@ -192,6 +200,7 @@ body {
 }
 
 .review-text {
+    font-family: var(--font-body);
     font-style: italic;
     margin-bottom: 10px;
     color: #333333;

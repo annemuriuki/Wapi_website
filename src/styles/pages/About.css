@@ -1,7 +1,7 @@
 /* About.css */
 
 .about-page {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-body);
     color: #0A4834; 
 }
 
@@ -22,12 +22,14 @@
 }
 
 .breadcrumbs {
+    font-family: var(--font-body);
     color: #EBE1CF; 
     font-size: 1em;
     margin-bottom: 15px;
 }
 
 .breadcrumbs a {
+    font-family: var(--font-body);
     color: #9F8151; 
     text-decoration: none;
 }
@@ -44,6 +46,7 @@
 }
 
 .header-title {
+    font-family: var(--font-heading);
     font-size: 3.5em;
     font-weight: bold;
     color: #FFFFFF; 
@@ -81,6 +84,7 @@
 }
 
 .our-story-section .section-heading {
+    font-family: var(--font-heading);
     font-size: 1.6em;
     color: #9F8151; 
     margin-bottom: 20px;
@@ -90,6 +94,7 @@
 }
 
 .our-story-section .story-title {
+    font-family: var(--font-heading);
     font-size: 2.5em;
     color: #0A4834; 
     margin-bottom: 20px;
@@ -97,11 +102,13 @@
 }
 
 .our-story-section .highlight {
+    font-family: var(--font-body);
     color: #9F8151; 
     font-weight: bold;
 }
 
 .our-story-section .story-description {
+    font-family: var(--font-body);
     color: #000000; 
     line-height: 1.7;
     font-size: 1.15em;
@@ -138,6 +145,7 @@
 }
 
 .vision-mission-section .block-title {
+    font-family: var(--font-heading);
     color: #0A4834;
     font-size: 1.8em;
     font-weight: bold;
@@ -151,6 +159,7 @@
 }
 
 .vision-mission-section .block-list-item {
+    font-family: var(--font-body);
     color: #000000; 
     font-size: 1.1em;
     line-height: 1.7;
@@ -184,6 +193,7 @@
 }
 
 .meet-our-team-section .section-heading {
+    font-family: var(--font-heading);
     font-size: 2.2em;
     color: #0A4834; 
     margin-bottom: 40px;

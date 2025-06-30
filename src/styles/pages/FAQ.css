@@ -1,7 +1,7 @@
 /* FAQ.css */
 
 .faq-page {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     background-color: #F8F8F8;
     padding: 60px 20px; 
     color: #0A4834; 
@@ -100,6 +100,7 @@
 }
 
 .faq-header h3 {
+  font-family: var(--font-heading);
   font-size: 1.2rem;
   color: #9F8151;
   margin-bottom: 12px;
@@ -116,6 +117,7 @@
 }
 
 .faq-header p {
+  font-family: var(--font-body);
   color: #000000;
   font-size: 1rem;
   text-align: center;
@@ -125,6 +127,7 @@
 }
 
 .faq-container h2 {
+  font-family: var(--font-heading);
   font-size: 3.2rem;
   margin-bottom: 40px;
   color: #0A4834;
@@ -193,6 +196,7 @@
 }
 
 .faq-question h3 {
+  font-family: var(--font-heading);
   font-size: 1.15rem;
   color: #0A4834;
   margin: 0;
