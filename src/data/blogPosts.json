@@ -4,8 +4,8 @@
     "title": "Digital Marketing",
     "author": "Jane Doe",
     "date": "2024-06-01",
-    "excerpt": "Artificial intelligence continues to redefine industry landscapes at an unprecedented pace.",
-    "image": "/src/assets/images/blog/blog1.jpeg",
+    "excerpt": "In today's dynamic digital landscape, an effective marketing strategy is paramount.  This guide outlines five essential",
+    "image": "/images/blog/blog1.jpeg",
     "content": "In today's dynamic digital landscape, an effective marketing strategy is paramount. This guide outlines five essential approaches to elevate your online presence and truly engage your target audience. From advanced SEO tactics to leveraging new social media platforms, staying updated is key.\n\nContent marketing, influencer collaborations, and data-driven campaigns are becoming indispensable for achieving measurable results. Adaptability and continuous learning will be crucial for success."
   },
   {
@@ -14,16 +14,16 @@
     "author": "John Smith",
     "date": "2024-05-20",
     "excerpt": "Artificial intelligence continues to redefine industry landscapes at an unprecedented pace.",
-    "image": "/src/assets/images/blog/blog2.jpeg",
+    "image": "/images/blog/blog2.jpeg",
     "content": "Artificial intelligence continues to redefine industry landscapes at an unprecedented pace. Understanding its strategic implications is crucial for modern businesses looking to stay competitive. This article explores key trends and offers actionable insights for integrating AI into your operations to drive efficiency and foster innovation.\n\nThe rapid advancements in machine learning are opening new avenues for personalized customer experiences and predictive analytics. Companies that embrace these changes early will likely see significant advantages."
   },
   {
     "id": 3,
-    "title": "Business Intelligence",
-    "author": "Alex Lee",
+    "title": "Global Expansion",
+    "author": "Alex Mandal",
     "date": "2024-05-10",
     "excerpt": "Expanding into international territories presents both immense opportunities and unique challenges.",
-    "image": "/src/assets/images/blog/blog3.jpeg",
+    "image": "/images/blog/blog3.jpeg",
     "content": "Expanding into international territories presents both immense opportunities and unique challenges. This comprehensive guide helps emerging businesses understand the nuances of global market entry. We cover everything from regulatory compliance to cultural considerations, ensuring a smooth transition.\n\nStrategic partnerships and localized approaches are vital for successful cross-border operations. Preparing thoroughly for global expansion can unlock significant growth potential."
   }
 ] 
