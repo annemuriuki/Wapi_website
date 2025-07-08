@@ -1,29 +1,47 @@
 import React from 'react';
-import FeatureCard from './FeatureCard';
 import '../../styles/components/Features.css';
 
-/**
- * Features component for displaying multiple features or services
- * @param {Object} props - Component props
- * @param {Array} props.features - Array of feature objects with icon, title, and description
- * @param {string} props.title - Optional section title
- */
-function Features({ features, title }) {
-  return (
-    <div className="features-section">
-      {title && <h2 className="features-title">{title}</h2>}
-      <div className="features-container">
-        {features.map((feature) => (
-          <FeatureCard
-            key={feature.id}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
-        ))}
+// ---
+// Features data array
+// To add/remove features, simply edit this array.
+// Each feature should have an icon, title, and description.
+// ---
+import strategicConsultingIcon from '../../assets/images/icons/StrategicConsulting .jpg';
+import digitalTransformationIcon from '../../assets/images/icons/DigitalTransformation  .jpg';
+import perfomanceOptimizationIcon from '../../assets/images/icons/PerfomanceOptimization .jpg';
+
+const features = [
+  {
+    icon: strategicConsultingIcon,
+    title: 'Strategic Consulting',
+    description: 'Gain clarity and direction with expert insights into market dynamics, operational efficiency, and future-proof strategies.',
+  },
+  {
+    icon: digitalTransformationIcon,
+    title: 'Digital Transformation',
+    description: 'Leverage cutting-edge technology and seamless integration to modernize your operations and enhance user experience.',
+  },
+  {
+    icon: perfomanceOptimizationIcon,
+    title: 'Performance Optimization',
+    description: 'Unlock peak efficiency and maximize ROI through data-driven analysis and continuous improvement methodologies.',
+  },
+  // ---
+  // To add a new feature, copy the object above and update the icon, title, and description.
+  // ---
+];
+
+const Features = () => (
+  <div className="features-section">
+    {/* Features Section: Edit features in the array above */}
+    {features.map((feature, idx) => (
+      <div className="feature-card" key={idx}>
+        <img src={feature.icon} alt={feature.title} className="feature-icon" />
+        <h3 className="feature-title">{feature.title}</h3>
+        <p className="feature-description">{feature.description}</p>
       </div>
-    </div>
-  );
-}
+    ))}
+  </div>
+);
 
 export default Features;

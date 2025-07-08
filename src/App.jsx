@@ -12,6 +12,9 @@ import Blog from './pages/Blog';
 import SignupForm from './pages/Signupform';
 import Signin from './pages/Signin'
 import ScrollToTop from './components/ScrollToTop';
+import NotFound from './pages/NotFound';
+import ProfileSettings from './pages/ProfileSettings';
+import UserManagement from './pages/UserManagement';
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
           <Route path="signup-form" element={<SignupForm />} />
           <Route path="signin" element={<Signin />} />
         </Route>
+        <Route path="profile-settings" element={<ProfileSettings />} />
+        <Route path="user-management" element={<UserManagement />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Analytics />
     </BrowserRouter>

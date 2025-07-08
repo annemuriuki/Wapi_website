@@ -1,0 +1,68 @@
+const users = [
+  {
+    id: 1,
+    photo: 'https://randomuser.me/api/portraits/men/1.jpg',
+    name: 'George Lindorf',
+    mobile: '+4 315 12 32 62',
+    email: 'carlsen@armand.no',
+    status: 'Active',
+  },
+  {
+    id: 2,
+    photo: 'https://randomuser.me/api/portraits/men/2.jpg',
+    name: 'Eric Dyer',
+    mobile: '+2 134 25 65',
+    email: 'cristofor.aljer@store.no',
+    status: 'Active',
+  },
+  {
+    id: 3,
+    photo: 'https://randomuser.me/api/portraits/men/3.jpg',
+    name: 'Hatam Alssami',
+    mobile: '+1 354 22 21',
+    email: 'hatam@gmail.com',
+    status: 'Active',
+  },
+  {
+    id: 4,
+    photo: 'https://randomuser.me/api/portraits/men/4.jpg',
+    name: 'Michael Campbell',
+    mobile: '+1 756 52 72',
+    email: 'campb@hotmail.com',
+    status: 'Inactive',
+  },
+  {
+    id: 5,
+    photo: 'https://randomuser.me/api/portraits/women/5.jpg',
+    name: 'Ashley Williams',
+    mobile: '+1 965 43 11',
+    email: 'williams.ash@gmail.com',
+    status: 'Active',
+  },
+  {
+    id: 6,
+    photo: 'https://randomuser.me/api/portraits/women/6.jpg',
+    name: 'Vanessa Paradis',
+    mobile: '+1 644 12 38',
+    email: 'paradi.van@gmail.com',
+    status: 'Active',
+  },
+  {
+    id: 7,
+    photo: 'https://randomuser.me/api/portraits/women/7.jpg',
+    name: 'Lora Palmer',
+    mobile: '+1 900 43 24',
+    email: 'lora.palm@gmail.com',
+    status: 'Active',
+  },
+  {
+    id: 8,
+    photo: 'https://randomuser.me/api/portraits/women/8.jpg',
+    name: 'Christy Newborn',
+    mobile: '+0 254 75 12',
+    email: 'chris@amazon.com',
+    status: 'Inactive',
+  },
+];
+
+export default users; 
