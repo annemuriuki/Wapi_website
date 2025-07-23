@@ -16,6 +16,7 @@ import NotFound from './pages/NotFound';
 import ProfileSettings from './pages/ProfileSettings';
 import UserManagement from './pages/UserManagement';
 import Pricing from './pages/Pricing';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="signup-form" element={<SignupForm />} />
           <Route path="signin" element={<Signin />} />
+          <Route path="dashboard" element={<Dashboard />} />
         </Route>
         <Route path="profile-settings" element={<ProfileSettings />} />
         <Route path="user-management" element={<UserManagement />} />

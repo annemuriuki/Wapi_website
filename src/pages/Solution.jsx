@@ -43,7 +43,7 @@ const Solution = () => {
   ];
 
   return (
-    <div className="solutions-page">
+    <main className="solutions-page">
       <section className="header-section">
         <div className="header-content">
           <h1>Our Solutions</h1>
@@ -56,13 +56,13 @@ const Solution = () => {
           <h2>Explore Our Diverse Services</h2>
           <div className="solutions-list">
             {solutions.map((solution) => (
-              <div key={solution.id} className="solution-item">
+              <article key={solution.id} className="solution-item">
                 <div className="solution-header">
                   <span className="solution-icon">{solution.icon}</span>
                   <h3>{solution.title}</h3>
                 </div>
                 <div className="solution-details">{solution.details}</div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
@@ -80,7 +80,7 @@ const Solution = () => {
           <img src={professionalImage} alt="Professional Team" />
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

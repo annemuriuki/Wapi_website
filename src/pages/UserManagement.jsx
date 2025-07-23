@@ -15,7 +15,7 @@ const UserManagement = () => {
   const [toast, setToast] = useState({ open: false, message: '' });
   const [filter, setFilter] = useState('');
   const [form, setForm] = useState(emptyUser);
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   // Modal handlers
@@ -80,15 +80,15 @@ const UserManagement = () => {
   };
 
   return (
-    <div className="user-mgmt-page">
+    <main className="user-mgmt-page">
       {loading && (
         <div className="user-mgmt-loading-overlay">
           <LoadingSpinner label="Processing..." />
         </div>
       )}
-      <div className="user-mgmt-content">
+      <section className="user-mgmt-content">
         <button className="back-home-btn" onClick={() => navigate('/')}>← Back to Home</button>
-        <div className="user-mgmt-topbar">
+        <header className="user-mgmt-topbar">
           <h2>Members</h2>
           <div className="user-mgmt-actions">
             <button className="btn primary" onClick={() => openModal('add')} disabled={loading}>Add new</button>
@@ -96,9 +96,9 @@ const UserManagement = () => {
             <button className="btn" onClick={handleExport} disabled={loading}>Export members (Excel)</button>
             <button className="btn filter" onClick={() => openModal('filter')} disabled={loading}>Filter</button>
           </div>
-        </div>
-        <div className="user-mgmt-table-wrap">
-          <table className="user-mgmt-table">
+        </header>
+        <section className="user-mgmt-table-wrap">
+          <table className="user-mgmt-table" aria-label="User Management Table">
             <thead>
               <tr>
                 <th>Photo</th>
@@ -132,8 +132,8 @@ const UserManagement = () => {
               ))}
             </tbody>
           </table>
-        </div>
-      </div>
+        </section>
+      </section>
       {/* Add User Modal */}
       <Modal open={modal.open && modal.type === 'add'} onClose={closeModal}>
         <h3 className="modal-title">Add New User</h3>
@@ -209,7 +209,7 @@ const UserManagement = () => {
         </div>
       </Modal>
       <Toast open={toast.open} message={toast.message} onClose={closeToast} />
-    </div>
+    </main>
   );
 };
 
