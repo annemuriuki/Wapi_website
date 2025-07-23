@@ -17,6 +17,9 @@ import perfomanceOptimizationIcon from '../assets/images/icons/PerfomanceOptimiz
 import digitalTransformationIcon from '../assets/images/icons/DigitalTransformation  .jpg';
 import { useNavigate } from 'react-router-dom';
 import blogPosts from '../data/blogPosts.json';
+import Features from '../components/Features/Features';
+import AboutSection from '../components/About/AboutSection';
+import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
 
 function Home() {
   const navigate = useNavigate();
@@ -80,64 +83,23 @@ function Home() {
           <p className="welcome-text">WELCOME TO OUR SOLUTIONS</p>
           <h1 className="hero-title">Innovate. Transform.<br />Lead the Future.</h1>
           <p className="hero-subtitle">Empowering businesses to achieve unparalleled growth with cutting-edge solutions and strategic foresight. <br></br>Discover how we can elevate your vision.</p>
+          <button className="cta-button" onClick={() => navigate('/signup')}>
+            Get Started
+          </button>
         </div>
         <div className="hero-image-container">
           <img src={HeroImage} alt="Modern Business Solution" className="hero-realistic-image" />
         </div>
       </div>
 
-      <div className="features-section">
-        <div className="feature-card">
-          <img src={strategicConsultingIcon} alt="Strategic Consulting" className="feature-icon" />
-          <h3 className="feature-title">Strategic Consulting</h3>
-          <p className="feature-description">Gain clarity and direction with expert insights into market dynamics, operational efficiency, and future-proof strategies.</p>
-        </div>
-        <div className="feature-card">
-          <img src={digitalTransformationIcon} alt="Digital Transformation" className="feature-icon" />
-          <h3 className="feature-title">Digital Transformation</h3>
-          <p className="feature-description">Leverage cutting-edge technology and seamless integration to modernize your operations and enhance user experience.</p>
-        </div>
-        <div className="feature-card">
-          <img src={perfomanceOptimizationIcon} alt="Performance Optimization" className="feature-icon" />
-          <h3 className="feature-title">Performance Optimization</h3>
-          <p className="feature-description">Unlock peak efficiency and maximize ROI through data-driven analysis and continuous improvement methodologies.</p>
-        </div>
-      </div>
+      {/* Features Section: To customize, edit src/components/Features/Features.jsx */}
+      <Features />
 
-      <div className="full-width-hanging-blocks-section">
-        <div className="full-width-content-area">
-          <div className="full-width-image-container">
-            <img
-              src={about} 
-              alt="Why Partner With Us"
-              className="circular-image"
-            />
-          </div>
-          <div className="full-width-text-content">
-            <h2 className="full-width-section-heading">
-              Why Partner With TransactFlow?
-            </h2>
-            <p className="full-width-section-subheading">Distinguishing ourselves through unparalleled expertise, dedication, and measurable impact.</p>
-            <div className="full-width-hanging-blocks-list">
-              <div className="full-width-hanging-block-item">
-                <div className="green-accent"></div>
-                <span className="benefit-icon">✓</span> 
-                <p className="benefit-text"><strong>Expert-Led Team</strong><br />Benefit from the collective wisdom of seasoned professionals, each a leader in their respective field.</p>
-              </div>
-              <div className="full-width-hanging-block-item">
-                <div className="green-accent"></div>
-                <span className="benefit-icon">✓</span> 
-                <p className="benefit-text"><strong>Tailored Strategies</strong><br />We craft bespoke solutions that align perfectly with your unique objectives and organizational culture.</p>
-              </div>
-              <div className="full-width-hanging-block-item">
-                <div className="green-accent"></div>
-                <span className="benefit-icon">✓</span> 
-                <p className="benefit-text"><strong>Client-Centric Approach</strong><br />Your goals are our priority. We foster collaborative partnerships for mutual growth.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* About Section: To customize, edit src/components/About/AboutSection.jsx */}
+      <AboutSection />
+
+      {/* Testimonials Section: To customize, edit src/components/Testimonials/TestimonialsSection.jsx */}
+      <TestimonialsSection />
 
       <div className="blog-section">
         <div className="blog-header">

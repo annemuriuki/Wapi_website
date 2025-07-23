@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/Navbar.css';
 import successRate from '../assets/images/logos/success-rate.png';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaUserCircle } from 'react-icons/fa';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const avatarUrl = 'https://randomuser.me/api/portraits/men/32.jpg';
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -44,9 +46,25 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="navbar-right desktop-only">
+      <div className="navbar-right desktop-only" style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
         <Link to="/signup" className="navbar-sign-up">Sign Up</Link>
         <Link to="/signin" className="navbar-sign-in">Sign In</Link>
+        <div style={{ marginLeft: 18, position: 'relative' }}>
+          <img
+            src={avatarUrl}
+            alt="User avatar"
+            style={{ width: 38, height: 38, borderRadius: '50%', cursor: 'pointer', border: '2px solid #0A4834' }}
+            onClick={() => setDropdownOpen(v => !v)}
+          />
+          {dropdownOpen && (
+            <div style={{ position: 'absolute', right: 0, top: 48, background: '#fff', borderRadius: 10, boxShadow: '0 2px 12px rgba(0,0,0,0.12)', minWidth: 180, zIndex: 1000 }}>
+              <Link to="/profile-settings" style={{ display: 'block', padding: '12px 20px', color: '#0A4834', textDecoration: 'none', fontWeight: 500 }} onClick={() => setDropdownOpen(false)}>Profile Settings</Link>
+              <Link to="/user-management" style={{ display: 'block', padding: '12px 20px', color: '#0A4834', textDecoration: 'none', fontWeight: 500 }} onClick={() => setDropdownOpen(false)}>User Management</Link>
+              <div style={{ borderTop: '1px solid #eee', margin: '4px 0' }} />
+              <button style={{ display: 'block', width: '100%', padding: '12px 20px', background: 'none', border: 'none', color: '#c0392b', textAlign: 'left', fontWeight: 500, cursor: 'pointer' }} onClick={() => setDropdownOpen(false)}>Logout</button>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );

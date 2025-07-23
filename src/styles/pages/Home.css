@@ -731,3 +731,22 @@ body {
     justify-content: center;
   }
 }
+
+.cta-button {
+  background-color: #9F8151;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.cta-button:hover {
+  background-color: #0A4834;
+  color: #EBE1CF;
+  transform: translateY(-2px) scale(1.03);
+}
