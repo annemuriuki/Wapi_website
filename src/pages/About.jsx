@@ -11,12 +11,12 @@ import { SiGmail } from 'react-icons/si';
 
 function About() {
   return (
-    <div className="about-page">
+    <main className="about-page">
       {/* Hero Section */}
       <section className="header-section">
-        <div className="header-container">
+        <header className="header-container">
           <h1 className="header-title">About Us</h1>
-        </div>
+        </header>
       </section>
 
       {/* Our Story Section */}
@@ -38,7 +38,7 @@ function About() {
       {/* Vision and Mission Section */}
       <section className="vision-mission-section">
         <div className="container">
-          <div className="vision-block block">
+          <section className="vision-block block">
             <h3 className="block-title">Vision</h3>
             <ul className="block-list">
               <li className="block-list-item">To be the global leader in transformative digital solutions.</li>
@@ -46,8 +46,8 @@ function About() {
               <li className="block-list-item">Fostering a future where innovation drives sustainable growth.</li>
               <li className="block-list-item">Creating seamless, impactful experiences for every client.</li>
             </ul>
-          </div>
-          <div className="mission-block block">
+          </section>
+          <section className="mission-block block">
             <h3 className="block-title">Mission</h3>
             <ul className="block-list">
               <li className="block-list-item">
@@ -57,7 +57,7 @@ function About() {
                 We strive to build lasting partnerships based on trust, expertise, and a shared commitment to excellence.
               </li>
             </ul>
-          </div>
+          </section>
         </div>
       </section>
 
@@ -150,7 +150,7 @@ function About() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 

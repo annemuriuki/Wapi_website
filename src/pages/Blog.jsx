@@ -21,9 +21,9 @@ const BlogCard = ({ blog, onReadMore }) => {
                 <img src={blog.image || 'https://placehold.co/400x250/EBE1CF/0A4834?text=Blog+Image'} alt={blog.title} />
             </div>
             <div className="blog-post-content">
-                <div className="blog-post-meta" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div className="blog-post-meta">
                     <img src="/images/blog/author.jpeg" alt={blog.author} className="author-image" />
-                    <span className="author-name">{blog.author}</span>
+                    <span className="author-name">{blog.author}</span> 
                     <span className="blog-date">Date: {formattedDate}</span>
                 </div>
                 <h2 className="blog-post-title">{blog.title}</h2>

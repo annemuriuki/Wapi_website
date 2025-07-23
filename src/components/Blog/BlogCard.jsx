@@ -26,7 +26,7 @@ function BlogCard({ id, title, excerpt, image, author, authorImage, date, onClic
   };
   
   return (
-    <div className="blog-card" onClick={handleClick}>
+    <article className="blog-card" onClick={handleClick} tabIndex={0} role="button" aria-label={`Read blog post: ${title}`}> 
       <div className="blog-image-container">
         <img src={image} alt={title} className="blog-image" />
       </div>
@@ -34,7 +34,7 @@ function BlogCard({ id, title, excerpt, image, author, authorImage, date, onClic
         <h3 className="blog-title">{title}</h3>
         <div className="blog-meta">
           <div className="author-info">
-            <img src={authorImage} alt={author} className="author-image" />
+            <img src={authorImage} alt={`Author: ${author}`} className="author-image" />
             <span className="author-name"><strong>{author}</strong></span>
           </div>
         </div>
@@ -43,7 +43,7 @@ function BlogCard({ id, title, excerpt, image, author, authorImage, date, onClic
           <span className="date"><strong>{date}</strong></span>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

@@ -1,0 +1,135 @@
+.pricing-page {
+    padding: 48px 16px 32px 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+  
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .pricing-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    color: #103713;
+  }
+  
+  .pricing-header p {
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  .pricing-table-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 32px;
+    align-items: stretch;
+  }
+  
+  .pricing-card {
+    background: #fff;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(16, 55, 19, 0.06);
+    padding: 32px 28px 28px 28px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, border 0.2s;
+    height: 400px;
+    min-height: 400px;
+    max-height: 400px;
+  }
+  
+  .pricing-card.highlight {
+    border: 2px solid #0a4834;
+    box-shadow: 0 4px 24px rgba(10, 72, 52, 0.12);
+  }
+  
+  .pricing-card .plan-features {
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .plan-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0a4834;
+  }
+  
+  .plan-price {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #103713;
+  }
+  
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    width: 100%;
+  }
+  
+  .plan-features li {
+    padding: 7px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .plan-features li:last-child {
+    border-bottom: none;
+  }
+  
+  .select-plan-btn {
+    background: #0a4834;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: auto;
+    align-self: stretch;
+  }
+  
+  .select-plan-btn:hover {
+    background: #103713;
+  }
+  
+  .pricing-footer {
+    text-align: center;
+    margin-top: 24px;
+    color: #555;
+  }
+  
+  .pricing-footer a {
+    color: #0a4834;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 900px) {
+    .pricing-table-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .pricing-card {
+      width: 90vw;
+      max-width: 400px;
+      height: 480px;
+      min-height: 480px;
+      max-height: 480px;
+    }
+  }
+  

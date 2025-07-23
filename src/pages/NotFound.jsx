@@ -1,23 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/pages/NotFound.css';
 
 const NotFound = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => { setMounted(true); }, []);
   return (
-    <div style={{ minHeight: '100vh', width: '100vw', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#fff', position: 'fixed', top: 0, left: 0, zIndex: 10000, opacity: mounted ? 1 : 0, transform: mounted ? 'scale(1)' : 'scale(0.98)', transition: 'opacity 0.7s, transform 0.7s' }}>
+    <div className={`notfound-container${mounted ? ' mounted' : ''}`}>
       {/* Large Playful SVG Illustration */}
       <svg
         width="320"
         height="250"
         viewBox="0 0 320 250"
-        style={{
-          marginBottom: 12,
-          animation: 'float404 3s ease-in-out infinite alternate',
-          maxWidth: '90vw',
-          maxHeight: '40vh',
-          display: 'block'
-        }}
+        className="notfound-svg"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
       >

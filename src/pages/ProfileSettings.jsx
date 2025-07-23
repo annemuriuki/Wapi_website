@@ -62,23 +62,23 @@ const ProfileSettings = () => {
           </div>
           <form className="profile-settings-form" onSubmit={handleSave}>
             <div className="profile-form-row">
-              <label>NAME</label>
-              <input name="name" value={form.name} onChange={handleChange} />
+              <label htmlFor="profile-name">NAME</label>
+              <input id="profile-name" name="name" value={form.name} onChange={handleChange} />
               {isValid('name') && <span className="valid-check">&#10003;</span>}
             </div>
             <div className="profile-form-row">
-              <label>EMAIL</label>
-              <input name="email" type="email" value={form.email} onChange={handleChange} />
+              <label htmlFor="profile-email">EMAIL</label>
+              <input id="profile-email" name="email" type="email" value={form.email} onChange={handleChange} />
               {isValid('email') && <span className="valid-check">&#10003;</span>}
             </div>
             <div className="profile-form-row">
-              <label>PHONE</label>
-              <input name="phone" value={form.phone} onChange={handleChange} />
+              <label htmlFor="profile-phone">PHONE</label>
+              <input id="profile-phone" name="phone" value={form.phone} onChange={handleChange} />
               {isValid('phone') && <span className="valid-check">&#10003;</span>}
             </div>
             <div className="profile-form-row">
-              <label>PASSWORD</label>
-              <input name="password" type="password" value={form.password} onChange={handleChange} />
+              <label htmlFor="profile-password">PASSWORD</label>
+              <input id="profile-password" name="password" type="password" value={form.password} onChange={handleChange} />
               {isValid('password') && <span className="valid-check">&#10003;</span>}
             </div>
             <button type="submit" className="btn primary" disabled={loading}>SAVE</button>

@@ -11,24 +11,25 @@ import '../../styles/components/Team.css';
  */
 function TeamSection({ members, title, subtitle }) {
   return (
-    <div className="team-section">
-      <div className="team-header">
+    <section className="team-section">
+      <header className="team-header">
         <h2 className="team-title">{title}</h2>
         {subtitle && <p className="team-subtitle">{subtitle}</p>}
-      </div>
+      </header>
       <div className="team-grid">
         {members.map((member) => (
-          <TeamCard
-            key={member.id}
-            name={member.name}
-            role={member.role}
-            image={member.image}
-            bio={member.bio}
-            socialLinks={member.socialLinks}
-          />
+          <article key={member.id}>
+            <TeamCard
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              bio={member.bio}
+              socialLinks={member.socialLinks}
+            />
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
