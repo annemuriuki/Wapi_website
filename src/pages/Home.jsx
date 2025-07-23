@@ -77,8 +77,8 @@ function Home() {
   };
   
   return (
-    <div className="home-container">
-      <div className="home-section">
+    <main className="home-container">
+      <section className="home-section">
         <div className="home-content">
           <p className="welcome-text">WELCOME TO OUR SOLUTIONS</p>
           <h1 className="hero-title">Innovate. Transform.<br />Lead the Future.</h1>
@@ -90,27 +90,24 @@ function Home() {
         <div className="hero-image-container">
           <img src={HeroImage} alt="Modern Business Solution" className="hero-realistic-image" />
         </div>
-      </div>
+      </section>
 
-      {/* Features Section: To customize, edit src/components/Features/Features.jsx */}
       <Features />
 
-      {/* About Section: To customize, edit src/components/About/AboutSection.jsx */}
       <AboutSection />
 
-      {/* Testimonials Section: To customize, edit src/components/Testimonials/TestimonialsSection.jsx */}
       <TestimonialsSection />
 
-      <div className="blog-section">
-        <div className="blog-header">
+      <section className="blog-section">
+        <header className="blog-header">
           <h2>Uncover the Latest Insights</h2>
           <Link to="/blog" className="blog-button">
             Visit Our Blog
           </Link>
-        </div>
+        </header>
         <div className="blog-list">
           {blogPosts.map((blog) => (
-            <div key={blog.id} className="blog-card" onClick={() => handleBlogClick(blog.id)}>
+            <article key={blog.id} className="blog-card" onClick={() => handleBlogClick(blog.id)} tabIndex={0} role="button" aria-label={`Read blog post: ${blog.title}`}>
               <div className="blog-image-container">
                 <img src={blog.image} alt={blog.title} className="blog-image" />
               </div>
@@ -118,7 +115,7 @@ function Home() {
                 <h3 className="blog-title">{blog.title}</h3>
                 <div className="blog-meta">
                   <div className="author-info">
-                    <img src="/images/blog/author.jpeg" alt={blog.author} className="author-image" />
+                    <img src="/images/blog/author.jpeg" alt={`Author: ${blog.author}`} className="author-image" />
                     <span className="author-name">By {blog.author}</span>
                   </div>
                 </div>
@@ -127,12 +124,12 @@ function Home() {
                   <span className="date"><strong>{blog.date}</strong></span>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className="our-clients-section">
+      <section className="our-clients-section">
         <h2>Trusted By</h2>
         <Slider {...settings} ref={sliderRef}>
           {logos.map((logo) => (
@@ -141,8 +138,8 @@ function Home() {
             </div>
           ))}
         </Slider>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

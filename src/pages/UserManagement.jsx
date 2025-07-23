@@ -82,7 +82,7 @@ const UserManagement = () => {
   return (
     <div className="user-mgmt-page">
       {loading && (
-        <div style={{position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(10,72,52,0.18)', zIndex: 20000, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div className="user-mgmt-loading-overlay">
           <LoadingSpinner label="Processing..." />
         </div>
       )}
@@ -138,16 +138,19 @@ const UserManagement = () => {
       <Modal open={modal.open && modal.type === 'add'} onClose={closeModal}>
         <h3 className="modal-title">Add New User</h3>
         <form className="user-modal-form" onSubmit={handleAdd}>
-          <label>Name<input name="name" value={form.name} onChange={handleFormChange} required /></label>
-          <label>Email<input name="email" type="email" value={form.email} onChange={handleFormChange} required /></label>
-          <label>Mobile<input name="mobile" value={form.mobile} onChange={handleFormChange} required /></label>
-          <label>Status
-            <select name="status" value={form.status} onChange={handleFormChange}>
-              <option value="Active">Active</option>
-              <option value="Inactive">Inactive</option>
-            </select>
-          </label>
-          <label>Photo URL<input name="photo" value={form.photo} onChange={handleFormChange} /></label>
+          <label htmlFor="add-name">Name</label>
+          <input id="add-name" name="name" value={form.name} onChange={handleFormChange} required />
+          <label htmlFor="add-email">Email</label>
+          <input id="add-email" name="email" type="email" value={form.email} onChange={handleFormChange} required />
+          <label htmlFor="add-mobile">Mobile</label>
+          <input id="add-mobile" name="mobile" value={form.mobile} onChange={handleFormChange} required />
+          <label htmlFor="add-status">Status</label>
+          <select id="add-status" name="status" value={form.status} onChange={handleFormChange}>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+          <label htmlFor="add-photo">Photo URL</label>
+          <input id="add-photo" name="photo" value={form.photo} onChange={handleFormChange} />
           <div className="modal-actions">
             <button className="btn" type="button" onClick={closeModal} disabled={loading}>Cancel</button>
             <button className="btn primary" type="submit" disabled={loading}>Add</button>
@@ -158,16 +161,19 @@ const UserManagement = () => {
       <Modal open={modal.open && modal.type === 'edit'} onClose={closeModal}>
         <h3 className="modal-title">Edit User</h3>
         <form className="user-modal-form" onSubmit={handleEdit}>
-          <label>Name<input name="name" value={form.name} onChange={handleFormChange} required /></label>
-          <label>Email<input name="email" type="email" value={form.email} onChange={handleFormChange} required /></label>
-          <label>Mobile<input name="mobile" value={form.mobile} onChange={handleFormChange} required /></label>
-          <label>Status
-            <select name="status" value={form.status} onChange={handleFormChange}>
-              <option value="Active">Active</option>
-              <option value="Inactive">Inactive</option>
-            </select>
-          </label>
-          <label>Photo URL<input name="photo" value={form.photo} onChange={handleFormChange} /></label>
+          <label htmlFor="edit-name">Name</label>
+          <input id="edit-name" name="name" value={form.name} onChange={handleFormChange} required />
+          <label htmlFor="edit-email">Email</label>
+          <input id="edit-email" name="email" type="email" value={form.email} onChange={handleFormChange} required />
+          <label htmlFor="edit-mobile">Mobile</label>
+          <input id="edit-mobile" name="mobile" value={form.mobile} onChange={handleFormChange} required />
+          <label htmlFor="edit-status">Status</label>
+          <select id="edit-status" name="status" value={form.status} onChange={handleFormChange}>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+          <label htmlFor="edit-photo">Photo URL</label>
+          <input id="edit-photo" name="photo" value={form.photo} onChange={handleFormChange} />
           <div className="modal-actions">
             <button className="btn" type="button" onClick={closeModal} disabled={loading}>Cancel</button>
             <button className="btn primary" type="submit" disabled={loading}>Save</button>

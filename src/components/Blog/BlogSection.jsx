@@ -14,31 +14,32 @@ import '../../styles/components/Blog.css';
  */
 function BlogSection({ posts, title, buttonText, buttonLink, onBlogClick }) {
   return (
-    <div className="blog-section">
-      <div className="blog-header">
+    <section className="blog-section">
+      <header className="blog-header">
         <h2>{title}</h2>
         {buttonText && buttonLink && (
           <Link to={buttonLink} className="blog-button">
             {buttonText}
           </Link>
         )}
-      </div>
+      </header>
       <div className="blog-list">
         {posts.map((post) => (
-          <BlogCard
-            key={post.id}
-            id={post.id}
-            title={post.title}
-            excerpt={post.excerpt}
-            image={post.image}
-            author={post.author}
-            authorImage={post.authorImage}
-            date={post.date}
-            onClick={onBlogClick}
-          />
+          <article key={post.id}>
+            <BlogCard
+              id={post.id}
+              title={post.title}
+              excerpt={post.excerpt}
+              image={post.image}
+              author={post.author}
+              authorImage={post.authorImage}
+              date={post.date}
+              onClick={onBlogClick}
+            />
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

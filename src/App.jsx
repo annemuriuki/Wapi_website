@@ -15,6 +15,7 @@ import ScrollToTop from './components/ScrollToTop';
 import NotFound from './pages/NotFound';
 import ProfileSettings from './pages/ProfileSettings';
 import UserManagement from './pages/UserManagement';
+import Pricing from './pages/Pricing';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="solutions" element={<Solutions />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="pricing" element={<Pricing />} />
           <Route path="contact" element={<Contact />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="signup" element={<Signup />} />

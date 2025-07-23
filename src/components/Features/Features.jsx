@@ -32,16 +32,16 @@ const features = [
 ];
 
 const Features = () => (
-  <div className="features-section">
+  <section className="features-section">
     {/* Features Section: Edit features in the array above */}
     {features.map((feature, idx) => (
-      <div className="feature-card" key={idx}>
+      <article className="feature-card" key={idx}>
         <img src={feature.icon} alt={feature.title} className="feature-icon" />
         <h3 className="feature-title">{feature.title}</h3>
         <p className="feature-description">{feature.description}</p>
-      </div>
+      </article>
     ))}
-  </div>
+  </section>
 );
 
 export default Features;

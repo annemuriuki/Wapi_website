@@ -1,0 +1,30 @@
+.loading-spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  border: 6px solid #EBE1CF;
+  border-top: 6px solid #0A4834;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+}
+
+.loading-spinner-label {
+  margin-top: 18px;
+  color: #0A4834;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 

@@ -12,15 +12,14 @@ import '../../styles/components/Team.css';
  */
 function TeamCard({ name, role, image, bio, socialLinks = [] }) {
   return (
-    <div className="team-card">
+    <article className="team-card">
       <div className="team-image-container">
-        <img src={image} alt={name} className="team-image" />
+        <img src={image} alt={`Photo of ${name}, ${role}`} className="team-image" />
       </div>
       <div className="team-content">
         <h3 className="team-name">{name}</h3>
         <p className="team-role">{role}</p>
         {bio && <p className="team-bio">{bio}</p>}
-        
         {socialLinks.length > 0 && (
           <div className="team-social-links">
             {socialLinks.map((link, index) => (
@@ -30,6 +29,7 @@ function TeamCard({ name, role, image, bio, socialLinks = [] }) {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
+                aria-label={`Visit ${name}'s social profile`}
               >
                 {link.icon}
               </a>
@@ -37,7 +37,7 @@ function TeamCard({ name, role, image, bio, socialLinks = [] }) {
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 }
 

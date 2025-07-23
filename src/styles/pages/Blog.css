@@ -81,11 +81,9 @@
 }
 
 .blog-post-meta {
-    color: #9F8151;
-    font-size: 0.85em;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .blog-post-meta span {
