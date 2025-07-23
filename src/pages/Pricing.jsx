@@ -38,12 +38,12 @@ const plans = [
 
 function Pricing() {
   return (
-    <section className="pricing-page">
+    <main className="pricing-page">
       <header className="pricing-header">
         <h1>Pricing & Plans</h1>
         <p>Choose the plan that fits your business needs. Simple, transparent pricing.</p>
       </header>
-      <div className="pricing-table-container">
+      <section className="pricing-table-container">
         {plans.map((plan) => (
           <article key={plan.name} className={`pricing-card${plan.highlight ? ' highlight' : ''}`}>
             <h2 className="plan-name">{plan.name}</h2>
@@ -53,14 +53,16 @@ function Pricing() {
                 <li key={idx}>{feature}</li>
               ))}
             </ul>
-            <button className="select-plan-btn">{plan.price === 'Contact Us' ? 'Contact Sales' : 'Choose Plan'}</button>
+            <button className="select-plan-btn" aria-label={plan.price === 'Contact Us' ? 'Contact Sales' : `Choose ${plan.name} Plan`}>
+              {plan.price === 'Contact Us' ? 'Contact Sales' : 'Choose Plan'}
+            </button>
           </article>
         ))}
-      </div>
+      </section>
       <footer className="pricing-footer">
         <p>Need a custom solution? <a href="/contact">Contact us</a> for enterprise pricing.</p>
       </footer>
-    </section>
+    </main>
   );
 }
 
