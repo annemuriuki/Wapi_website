@@ -5,6 +5,7 @@ import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import profileData from '../data/profile';
 import '../styles/pages/ProfileSettings.css';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const avatarUrl = 'https://randomuser.me/api/portraits/men/32.jpg';
 
@@ -13,6 +14,7 @@ const ProfileSettings = () => {
   const [mounted, setMounted] = useState(false);
   const [modal, setModal] = useState({ open: false, type: '' });
   const [toast, setToast] = useState({ open: false, message: '' });
+  const [loading, setLoading] = useState(false); // Add loading state
   const fileInputRef = useRef();
   const navigate = useNavigate();
   useEffect(() => { setMounted(true); }, []);
@@ -27,14 +29,23 @@ const ProfileSettings = () => {
       setToast({ open: true, message: 'Avatar updated (demo)' });
     }
   };
-  const handleSave = e => {
+  const handleSave = async e => {
     e.preventDefault();
+    setLoading(true);
+    // Simulate async save
+    await new Promise(res => setTimeout(res, 1500));
+    setLoading(false);
     setToast({ open: true, message: 'Profile updated (demo only)' });
   };
   const isValid = field => form[field] && form[field].length > 2;
 
   return (
     <div className="profile-settings-page">
+      {loading && (
+        <div style={{position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(10,72,52,0.18)', zIndex: 20000, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <LoadingSpinner label="Saving..." />
+        </div>
+      )}
       <button className="back-home-btn" onClick={() => navigate('/')}>← Back to Home</button>
       <div className="profile-bg-anim">
         <div className="shape shape1" />
@@ -66,15 +77,11 @@ const ProfileSettings = () => {
               {isValid('phone') && <span className="valid-check">&#10003;</span>}
             </div>
             <div className="profile-form-row">
-              <label>WEBSITE</label>
-              <input name="website" value={form.website} onChange={handleChange} />
-            </div>
-            <div className="profile-form-row">
               <label>PASSWORD</label>
               <input name="password" type="password" value={form.password} onChange={handleChange} />
               {isValid('password') && <span className="valid-check">&#10003;</span>}
             </div>
-            <button type="submit" className="btn primary">SAVE</button>
+            <button type="submit" className="btn primary" disabled={loading}>SAVE</button>
           </form>
         </div>
       </div>

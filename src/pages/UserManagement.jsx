@@ -5,6 +5,7 @@ import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import usersData from '../data/users';
 import '../styles/pages/UserManagement.css';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const emptyUser = { name: '', email: '', mobile: '', status: 'Active', photo: '' };
 
@@ -14,6 +15,7 @@ const UserManagement = () => {
   const [toast, setToast] = useState({ open: false, message: '' });
   const [filter, setFilter] = useState('');
   const [form, setForm] = useState(emptyUser);
+  const [loading, setLoading] = useState(false); // Add loading state
   const navigate = useNavigate();
 
   // Modal handlers
@@ -27,22 +29,45 @@ const UserManagement = () => {
   const closeToast = () => setToast({ open: false, message: '' });
 
   // CRUD actions
-  const handleAdd = e => {
+  const handleAdd = async e => {
     e.preventDefault();
+    setLoading(true);
+    await new Promise(res => setTimeout(res, 1200));
     setUsers([...users, { ...form, id: Date.now() }]);
+    setLoading(false);
     closeModal();
     showToast('User added (demo)');
   };
-  const handleEdit = e => {
+  const handleEdit = async e => {
     e.preventDefault();
+    setLoading(true);
+    await new Promise(res => setTimeout(res, 1200));
     setUsers(users.map(u => u.id === form.id ? form : u));
+    setLoading(false);
     closeModal();
     showToast('User updated (demo)');
   };
-  const handleDelete = id => { setUsers(users.filter(u => u.id !== id)); closeModal(); showToast('User deleted (demo)'); };
+  const handleDelete = async id => {
+    setLoading(true);
+    await new Promise(res => setTimeout(res, 1200));
+    setUsers(users.filter(u => u.id !== id));
+    setLoading(false);
+    closeModal();
+    showToast('User deleted (demo)');
+  };
   const handleLogin = user => { showToast(`Demo: Login as ${user.name}`); };
-  const handleImport = () => showToast('Demo: Import not available');
-  const handleExport = () => showToast('Demo: Export not available');
+  const handleImport = async () => {
+    setLoading(true);
+    await new Promise(res => setTimeout(res, 1200));
+    setLoading(false);
+    showToast('Demo: Import not available');
+  };
+  const handleExport = async () => {
+    setLoading(true);
+    await new Promise(res => setTimeout(res, 1200));
+    setLoading(false);
+    showToast('Demo: Export not available');
+  };
   const handleFilter = val => setFilter(val);
 
   // Filtered users
@@ -56,15 +81,20 @@ const UserManagement = () => {
 
   return (
     <div className="user-mgmt-page">
+      {loading && (
+        <div style={{position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(10,72,52,0.18)', zIndex: 20000, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <LoadingSpinner label="Processing..." />
+        </div>
+      )}
       <div className="user-mgmt-content">
         <button className="back-home-btn" onClick={() => navigate('/')}>← Back to Home</button>
         <div className="user-mgmt-topbar">
           <h2>Members</h2>
           <div className="user-mgmt-actions">
-            <button className="btn primary" onClick={() => openModal('add')}>Add new</button>
-            <button className="btn" onClick={handleImport}>Import members</button>
-            <button className="btn" onClick={handleExport}>Export members (Excel)</button>
-            <button className="btn filter" onClick={() => openModal('filter')}>Filter</button>
+            <button className="btn primary" onClick={() => openModal('add')} disabled={loading}>Add new</button>
+            <button className="btn" onClick={handleImport} disabled={loading}>Import members</button>
+            <button className="btn" onClick={handleExport} disabled={loading}>Export members (Excel)</button>
+            <button className="btn filter" onClick={() => openModal('filter')} disabled={loading}>Filter</button>
           </div>
         </div>
         <div className="user-mgmt-table-wrap">
@@ -97,7 +127,7 @@ const UserManagement = () => {
                       <FaTrash title="Delete" onClick={() => openModal('delete', user)} />
                     </div>
                   </td>
-                  <td><button className="btn login" onClick={() => handleLogin(user)}>Login</button></td>
+                  <td><button className="btn login" onClick={() => handleLogin(user)} disabled={loading}>Login</button></td>
                 </tr>
               ))}
             </tbody>
@@ -119,8 +149,8 @@ const UserManagement = () => {
           </label>
           <label>Photo URL<input name="photo" value={form.photo} onChange={handleFormChange} /></label>
           <div className="modal-actions">
-            <button className="btn" type="button" onClick={closeModal}>Cancel</button>
-            <button className="btn primary" type="submit">Add</button>
+            <button className="btn" type="button" onClick={closeModal} disabled={loading}>Cancel</button>
+            <button className="btn primary" type="submit" disabled={loading}>Add</button>
           </div>
         </form>
       </Modal>
@@ -139,8 +169,8 @@ const UserManagement = () => {
           </label>
           <label>Photo URL<input name="photo" value={form.photo} onChange={handleFormChange} /></label>
           <div className="modal-actions">
-            <button className="btn" type="button" onClick={closeModal}>Cancel</button>
-            <button className="btn primary" type="submit">Save</button>
+            <button className="btn" type="button" onClick={closeModal} disabled={loading}>Cancel</button>
+            <button className="btn primary" type="submit" disabled={loading}>Save</button>
           </div>
         </form>
       </Modal>
@@ -160,8 +190,8 @@ const UserManagement = () => {
         <h3 className="modal-title">Delete User?</h3>
         <p>Are you sure you want to delete <b>{modal.user?.name}</b>?</p>
         <div className="modal-actions">
-          <button className="btn" onClick={closeModal}>Cancel</button>
-          <button className="btn primary" onClick={() => handleDelete(modal.user.id)}>Delete</button>
+          <button className="btn" onClick={closeModal} disabled={loading}>Cancel</button>
+          <button className="btn primary" onClick={() => handleDelete(modal.user.id)} disabled={loading}>Delete</button>
         </div>
       </Modal>
       {/* Filter Modal */}
@@ -169,7 +199,7 @@ const UserManagement = () => {
         <h3 className="modal-title">Filter Users</h3>
         <input type="text" placeholder="Name or email" value={filter} onChange={e => handleFilter(e.target.value)} className="modal-filter-input" />
         <div className="modal-actions">
-          <button className="btn primary" onClick={closeModal}>Apply</button>
+          <button className="btn primary" onClick={closeModal} disabled={loading}>Apply</button>
         </div>
       </Modal>
       <Toast open={toast.open} message={toast.message} onClose={closeToast} />
