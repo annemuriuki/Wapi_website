@@ -16,9 +16,9 @@ function TeamSection({ members, title, subtitle }) {
         <h2 className="team-title">{title}</h2>
         {subtitle && <p className="team-subtitle">{subtitle}</p>}
       </header>
-      <div className="team-grid">
+      <ul className="team-grid" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
         {members.map((member) => (
-          <article key={member.id}>
+          <li key={member.id}>
             <TeamCard
               name={member.name}
               role={member.role}
@@ -26,9 +26,9 @@ function TeamSection({ members, title, subtitle }) {
               bio={member.bio}
               socialLinks={member.socialLinks}
             />
-          </article>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

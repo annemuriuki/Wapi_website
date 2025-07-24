@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/components/Navbar.css';
 import successRate from '../assets/images/logos/success-rate.png';
@@ -10,11 +10,44 @@ const Navbar = () => {
   const avatarUrl = 'https://randomuser.me/api/portraits/men/32.jpg';
   const isAdmin = true; // Set to true for demo; replace with real logic
   const location = useLocation();
+  const dropdownRef = useRef();
+  const avatarBtnRef = useRef();
 
   useEffect(() => {
     setDropdownOpen(false);
     setMobileMenuOpen(false);
   }, [location]);
+
+  // Close dropdown on outside click or ESC
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    function handleClick(e) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target) &&
+        avatarBtnRef.current &&
+        !avatarBtnRef.current.contains(e.target)
+      ) {
+        setDropdownOpen(false);
+      }
+    }
+    function handleEsc(e) {
+      if (e.key === 'Escape') setDropdownOpen(false);
+    }
+    document.addEventListener('mousedown', handleClick);
+    document.addEventListener('keydown', handleEsc);
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('keydown', handleEsc);
+    };
+  }, [dropdownOpen]);
+
+  // Keyboard: open dropdown with Enter/Space
+  function handleAvatarKeyDown(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      setDropdownOpen((v) => !v);
+    }
+  }
 
   return (
     <nav className="custom-navbar" aria-label="Main Navigation">
@@ -42,24 +75,29 @@ const Navbar = () => {
         </ul>
       </div>
       {/* Right: Sign Up, Sign In, Profile Dropdown */}
-      <div className="navbar-right" style={{ position: 'relative' }}>
-        <Link to="/signup" className="navbar-sign-up" onClick={() => setMobileMenuOpen(false)}>Sign Up</Link>
-        <Link to="/signin" className="navbar-sign-in" onClick={() => setMobileMenuOpen(false)}>Sign In</Link>
+      <div className="navbar-right" style={{ position: 'relative', alignItems: 'center', display: 'flex' }}>
+        <Link to="/signup" className={`navbar-sign-up${mobileMenuOpen ? ' mobile-btn' : ''}`} onClick={() => setMobileMenuOpen(false)}>Sign Up</Link>
+        <Link to="/signin" className={`navbar-sign-in${mobileMenuOpen ? ' mobile-btn' : ''}`} onClick={() => setMobileMenuOpen(false)}>Sign In</Link>
         <button
           className="navbar-avatar-btn"
-          aria-label="User menu"
+          aria-label="User Profile"
+          aria-haspopup="true"
           aria-expanded={dropdownOpen}
           aria-controls="navbar-user-dropdown"
           onClick={() => setDropdownOpen(v => !v)}
+          onKeyDown={handleAvatarKeyDown}
+          ref={avatarBtnRef}
+          style={{ display: 'flex', alignItems: 'center' }}
         >
           <img
             src={avatarUrl}
-            alt="User avatar"
+            alt="User Profile"
             className="avatar"
+            style={{ verticalAlign: 'middle' }}
           />
         </button>
         {dropdownOpen && (
-          <ul id="navbar-user-dropdown" className="profile-dropdown" role="menu">
+          <ul id="navbar-user-dropdown" className="profile-dropdown" role="menu" ref={dropdownRef}>
             <li role="none"><Link to="/dashboard" role="menuitem" onClick={() => setDropdownOpen(false)}>Dashboard</Link></li>
             <li role="none"><Link to="/profile-settings" role="menuitem" onClick={() => setDropdownOpen(false)}>Profile Settings</Link></li>
             {isAdmin && (

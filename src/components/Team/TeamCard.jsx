@@ -13,9 +13,9 @@ import '../../styles/components/Team.css';
 function TeamCard({ name, role, image, bio, socialLinks = [] }) {
   return (
     <article className="team-card">
-      <div className="team-image-container">
+      <figure className="team-image-container">
         <img src={image} alt={`Photo of ${name}, ${role}`} className="team-image" />
-      </div>
+      </figure>
       <div className="team-content">
         <h3 className="team-name">{name}</h3>
         <p className="team-role">{role}</p>
@@ -29,9 +29,12 @@ function TeamCard({ name, role, image, bio, socialLinks = [] }) {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
-                aria-label={`Visit ${name}'s social profile`}
+                aria-label={`Visit ${name}'s social profile${link.platform ? ' on ' + link.platform : ''}`}
               >
                 {link.icon}
+                {link.platform && (
+                  <span className="visually-hidden">{` ${link.platform}`}</span>
+                )}
               </a>
             ))}
           </div>
