@@ -11,7 +11,7 @@ import '../../styles/components/Features.css';
 function FeatureCard({ icon, title, description }) {
   return (
     <div className="feature-card">
-      <img src={icon} alt={title} className="feature-icon" />
+      <img src={icon} alt={title} className="feature-icon" loading="lazy" />
       <h3 className="feature-title">{title}</h3>
       <p className="feature-description">{description}</p>
     </div>

@@ -30,7 +30,7 @@ function About() {
             </p>
           </div>
           <div className="image-content">
-            <img src={aboutImage} alt="Our Collaborative Team" />
+            <img src={aboutImage} alt="Our Collaborative Team" loading="lazy" />
           </div>
         </div>
       </section>
@@ -88,7 +88,7 @@ function About() {
           <h2 className="section-heading">Meet Our Expert Team</h2>
           <div className="team-members-grid">
             <div className="team-member">
-              <img src={member1} alt="Team Member 1" />
+              <img src={member1} alt="Team Member 1" loading="lazy" />
               <div className="member-info">
                 <h3>Alice Johnson</h3>
                 <p className="role">Chief Executive Officer</p>
@@ -103,7 +103,7 @@ function About() {
               </div>
             </div>
             <div className="team-member">
-              <img src={member2} alt="Team Member 2" />
+              <img src={member2} alt="Team Member 2" loading="lazy" />
               <div className="member-info">
                 <h3>Robert Davis</h3>
                 <p className="role">Chief Technology Officer</p>
@@ -118,7 +118,7 @@ function About() {
               </div>
             </div>
             <div className="team-member">
-              <img src={member3} alt="Team Member 3" />
+              <img src={member3} alt="Team Member 3" loading="lazy" />
               <div className="member-info">
                 <h3>Sarah Chen</h3>
                 <p className="role">Head of Operations</p>
@@ -133,7 +133,7 @@ function About() {
               </div>
             </div>
             <div className="team-member">
-              <img src={member4} alt="Team Member 4" />
+              <img src={member4} alt="Team Member 4" loading="lazy" />
               <div className="member-info">
                 <h3>David Miller</h3>
                 <p className="role">Lead Strategist</p>

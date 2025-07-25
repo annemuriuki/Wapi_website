@@ -19,7 +19,7 @@ function Hero({ welcomeText, title, subtitle, imageSrc, imageAlt }) {
         {subtitle && <p className="hero-subtitle">{subtitle}</p>}
       </div>
       <div className="hero-image-container">
-        <img src={imageSrc} alt={imageAlt} className="hero-image" />
+        <img src={imageSrc} alt={imageAlt} className="hero-image" loading="lazy" />
       </div>
     </div>
   );

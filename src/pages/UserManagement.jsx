@@ -5,7 +5,7 @@ import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import usersData from '../data/users';
 import '../styles/pages/UserManagement.css';
-import LoadingSpinner from '../components/LoadingSpinner';
+
 
 const emptyUser = { name: '', email: '', mobile: '', status: 'Active', photo: '' };
 
