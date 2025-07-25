@@ -9,7 +9,7 @@ export default function Layout() {
             <header>
                 <Navbar />
             </header>
-            <main className="flex-grow">
+            <main className="flex-grow" style={{ position: 'relative' }}>
                 <Outlet />
             </main>
             <footer>

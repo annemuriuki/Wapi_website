@@ -5,7 +5,6 @@ import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import profileData from '../data/profile';
 import '../styles/pages/ProfileSettings.css';
-import LoadingSpinner from '../components/LoadingSpinner';
 
 const avatarUrl = 'https://randomuser.me/api/portraits/men/32.jpg';
 

@@ -97,7 +97,13 @@ const Navbar = () => {
           />
         </button>
         {dropdownOpen && (
-          <ul id="navbar-user-dropdown" className="profile-dropdown" role="menu" ref={dropdownRef}>
+          <ul
+            id="navbar-user-dropdown"
+            className="profile-dropdown"
+            role="menu"
+            ref={dropdownRef}
+            style={{ boxShadow: '0 8px 32px rgba(10,72,52,0.13)', background: '#fff', borderRadius: 12, minWidth: 180, zIndex: 10010 }}
+          >
             <li role="none"><Link to="/dashboard" role="menuitem" onClick={() => setDropdownOpen(false)}>Dashboard</Link></li>
             <li role="none"><Link to="/profile-settings" role="menuitem" onClick={() => setDropdownOpen(false)}>Profile Settings</Link></li>
             {isAdmin && (

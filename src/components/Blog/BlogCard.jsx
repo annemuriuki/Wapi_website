@@ -28,13 +28,13 @@ function BlogCard({ id, title, excerpt, image, author, authorImage, date, onClic
   return (
     <article className="blog-card" onClick={handleClick} tabIndex={0} role="button" aria-label={`Read blog post: ${title}`}> 
       <div className="blog-image-container">
-        <img src={image} alt={title} className="blog-image" />
+        <img src={image} alt={title} className="blog-image" loading="lazy" />
       </div>
       <div className="blog-content">
         <h3 className="blog-title">{title}</h3>
         <div className="blog-meta">
           <div className="author-info">
-            <img src={authorImage} alt={`Author: ${author}`} className="author-image" />
+            <img src={authorImage} alt={`Author: ${author}`} className="author-image" loading="lazy" />
             <span className="author-name"><strong>{author}</strong></span>
           </div>
         </div>

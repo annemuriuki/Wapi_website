@@ -38,6 +38,7 @@ const AboutSection = () => (
           src={aboutData.image}
           alt={aboutData.imageAlt}
           className="circular-image"
+          loading="lazy"
         />
       </div>
       <div className="full-width-text-content">

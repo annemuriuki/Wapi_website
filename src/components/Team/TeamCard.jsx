@@ -14,7 +14,7 @@ function TeamCard({ name, role, image, bio, socialLinks = [] }) {
   return (
     <article className="team-card">
       <figure className="team-image-container">
-        <img src={image} alt={`Photo of ${name}, ${role}`} className="team-image" />
+        <img src={image} alt={`Photo of ${name}, ${role}`} className="team-image" loading="lazy" />
       </figure>
       <div className="team-content">
         <h3 className="team-name">{name}</h3>

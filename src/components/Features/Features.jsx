@@ -36,7 +36,7 @@ const Features = () => (
     {/* Features Section: Edit features in the array above */}
     {features.map((feature, idx) => (
       <article className="feature-card" key={idx}>
-        <img src={feature.icon} alt={feature.title} className="feature-icon" />
+        <img src={feature.icon} alt={feature.title} className="feature-icon" loading="lazy" />
         <h3 className="feature-title">{feature.title}</h3>
         <p className="feature-description">{feature.description}</p>
       </article>
