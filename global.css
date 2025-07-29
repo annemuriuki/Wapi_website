@@ -1,12 +1,48 @@
 /* global.css */
+
+/* Force light mode and prevent dark mode from affecting colors */
+html {
+  color-scheme: light only;
+}
+
+/* Ensure all elements maintain their intended colors */
 * {
   box-sizing: border-box;
 }
 
+/* Force background colors to stay white/light */
 html, body {
   overflow-x: hidden;
   width: 100%;
-  -webkit-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Override any system dark mode colors - more targeted approach */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #ffffff !important;
+  }
+  
+  /* Only override specific elements that might be affected by dark mode */
+  .notfound-container {
+    background-color: #ffffff !important;
+  }
+}
+
+/* High contrast mode overrides */
+@media (prefers-contrast: high) {
+  html, body {
+    background-color: #ffffff !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 button, 

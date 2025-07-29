@@ -1,0 +1,37 @@
+TransactFlow - License Information
+==================================
+
+This item is licensed under the Envato Market Standard License.
+For full details, see: https://themeforest.net/licenses/standard
+
+----------------------------------
+
+THIRD-PARTY ASSETS & CREDITS
+----------------------------------
+
+**Fonts:**
+- Roboto (Google Fonts)  
+  https://fonts.google.com/specimen/Roboto  
+  Licensed under the Apache License, Version 2.0
+- Inter (Google Fonts)  
+  https://fonts.google.com/specimen/Inter  
+  Licensed under the SIL Open Font License, Version 1.1
+
+**Images & Icons:**
+- All images and icons in `public/images/` and `src/assets/images/` are either:
+  - Created specifically for this project, or
+  - Sourced from free-to-use resources (e.g., Unsplash, Pexels, or similar), or
+  - Provided as placeholders for demo purposes only.
+- If you intend to use these images/icons in a production or commercial environment, please ensure you have the appropriate rights or replace them with your own assets.
+
+**Libraries:**
+- React (https://reactjs.org/) - MIT License
+- Vite (https://vitejs.dev/) - MIT License
+- Other dependencies as listed in `package.json` (all open source)
+
+**Favicon:**
+- Favicon assets in `public/favicon_io/` generated via https://realfavicongenerator.net/ (free for commercial use)
+
+----------------------------------
+
+If you have questions about asset rights or need further clarification, please contact the author via the support email listed in the README.md. 

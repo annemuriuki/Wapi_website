@@ -103,11 +103,16 @@ TransactFlow/
 ## Credits & Assets
 
 - **Images:** All images and icons used are either created for this project or sourced from free-to-use resources. See `public/images/` and `src/assets/images/`.
-- **Fonts:** [List any fonts used, e.g., Google Fonts]
+  - User avatars in demo data are sourced from [randomuser.me](https://randomuser.me/) (free for personal and commercial use, see their [license](https://randomuser.me/faq)).
+- **Fonts:**
+  - [Roboto](https://fonts.google.com/specimen/Roboto) (Google Fonts, Apache License 2.0)
+  - [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts, SIL Open Font License 1.1)
 - **Libraries:**
-  - [React](https://reactjs.org/)
-  - [Vite](https://vitejs.dev/)
-  - [Other dependencies as listed in `package.json`]
+  - [React](https://reactjs.org/) (MIT License)
+  - [Vite](https://vitejs.dev/) (MIT License)
+  - Other dependencies as listed in `package.json` (all open source)
+- **Favicon:**
+  - Favicon assets in `public/favicon_io/` generated via [RealFaviconGenerator](https://realfavicongenerator.net/) (free for commercial use)
 
 ---
 

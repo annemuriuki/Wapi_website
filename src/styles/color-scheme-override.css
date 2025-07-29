@@ -1,0 +1,47 @@
+/* Color Scheme Override - Minimal approach to prevent dark mode interference */
+
+/* Root level color scheme enforcement */
+:root {
+  color-scheme: light only;
+}
+
+/* Override system dark mode preferences - minimal approach */
+@media (prefers-color-scheme: dark) {
+  /* Only force white background on body and html */
+  html, body {
+    background-color: #ffffff !important;
+  }
+  
+  /* Only protect specific elements that might be affected */
+  .notfound-container {
+    background-color: #ffffff !important;
+  }
+  
+  /* Ensure form elements stay readable */
+  input, textarea, select {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+}
+
+/* High contrast mode overrides - minimal */
+@media (prefers-contrast: high) {
+  html, body {
+    background-color: #ffffff !important;
+  }
+  
+  .notfound-container {
+    background-color: #ffffff !important;
+  }
+}
+
+/* Mobile specific overrides - minimal */
+@media (max-width: 768px) {
+  html, body {
+    background-color: #ffffff !important;
+  }
+  
+  .notfound-container {
+    background-color: #ffffff !important;
+  }
+} 

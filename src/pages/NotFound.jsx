@@ -34,13 +34,15 @@ const NotFound = () => {
         <circle cx="110" cy="220" r="14" fill="#9F8151" />
         <path d="M110 220 Q115 225 122 220 Q129 215 110 212" stroke="#0A4834" strokeWidth="2" fill="none" />
       </svg>
-      <div style={{ fontSize: '3.5rem', fontWeight: 900, color: '#0A4834', letterSpacing: 2, marginBottom: 0 }}>404</div>
-      <div style={{ fontSize: '2rem', fontWeight: 700, color: '#9F8151', margin: '8px 0 0 0' }}>YIKES!</div>
-      <div style={{ color: '#444', margin: '12px 0 28px 0', fontSize: 18 }}>The page you're looking for could not be found.</div>
-      <Link to="/" style={{ marginTop: 12, padding: '12px 32px', background: '#0A4834', color: '#fff', borderRadius: 8, textDecoration: 'none', fontWeight: 'bold', fontSize: 18, boxShadow: '0 2px 8px rgba(0,0,0,0.08)', transition: 'background 0.3s, transform 0.2s' }} onMouseOver={e => e.currentTarget.style.background = '#9F8151'} onMouseOut={e => e.currentTarget.style.background = '#0A4834'}>Return to Home</Link>
-      <style>{`
-        @keyframes float404 { 0% { transform: translateY(0); } 100% { transform: translateY(-18px); } }
-      `}</style>
+      
+      <div className="notfound-content">
+        <div className="notfound-404">404</div>
+        <div className="notfound-title">YIKES!</div>
+        <div className="notfound-message">The page you're looking for could not be found.</div>
+        <Link to="/" className="notfound-button">
+          Return to Home
+        </Link>
+      </div>
     </div>
   );
 };
