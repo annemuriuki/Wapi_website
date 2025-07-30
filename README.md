@@ -318,6 +318,8 @@ npx vite-bundle-analyzer dist
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+**Note**: This item is also licensed under the Envato Market Standard License for marketplace distribution. See [license.txt](license.txt) for full Envato license details.
+
 ## 🤝 Support
 
 For support and questions:
