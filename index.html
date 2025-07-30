@@ -2,13 +2,187 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Transact Flow - Streamline your business transactions with our innovative solutions.">
     <meta name="keywords" content="Transact Flow, business, transactions, solutions, optimization, consulting">
     <meta name="author" content="Transact Flow Team">
     <meta name="color-scheme" content="light only">
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
+    
+    <!-- Mobile performance optimizations -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- Critical CSS for above-fold content -->
+    <style>
+      /* Critical styles for hero section */
+      .home-container { font-family: 'Roboto', sans-serif; }
+      .home-section { 
+        display: flex; 
+        align-items: center; 
+        min-height: 100vh; 
+        padding: 2rem; 
+        background: #0A4834;
+      }
+      .home-content { 
+        flex: 1; 
+        color: white; 
+        max-width: 600px; 
+      }
+      .welcome-text { 
+        font-size: 1.2rem; 
+        color: #9F8151; 
+        margin-bottom: 1rem; 
+        font-weight: 500; 
+      }
+      .hero-title { 
+        font-size: 3.5rem; 
+        font-weight: bold; 
+        margin-bottom: 1.5rem; 
+        line-height: 1.2; 
+        color: white;
+      }
+      .hero-subtitle { 
+        font-size: 1.3rem; 
+        margin-bottom: 2rem; 
+        line-height: 1.6; 
+        opacity: 0.9; 
+        color: white;
+      }
+      .cta-button { 
+        background: #9F8151; 
+        color: white; 
+        border: none; 
+        padding: 1rem 2rem; 
+        font-size: 1.2rem; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        font-weight: bold; 
+        transition: background 0.3s; 
+      }
+      .cta-button:hover { background: #8B7351; }
+      .cta-button:focus { 
+        outline: 2px solid #9F8151; 
+        outline-offset: 2px; 
+      }
+      .hero-image-container { 
+        flex: 1; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+      }
+      .hero-realistic-image { 
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 12px; 
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
+      }
+      
+      /* Loading placeholder */
+      .loading-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        background: #f5f5f5;
+        border-radius: 8px;
+        color: #666;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      
+      /* Mobile optimizations */
+      @media (max-width: 768px) {
+        .home-section { 
+          flex-direction: column; 
+          text-align: center; 
+          padding: 1rem; 
+          background: #0A4834;
+        }
+        .hero-title { font-size: 2.5rem; color: white; }
+        .hero-subtitle { font-size: 1.1rem; color: white; }
+        .hero-image-container { margin-top: 2rem; }
+        .hero-realistic-image { 
+          box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+        }
+        .loading-placeholder {
+          min-height: 150px;
+          background: #f5f5f5;
+        }
+      }
+      
+      /* Ultra-mobile optimizations */
+      @media (max-width: 480px) {
+        .hero-title { font-size: 2rem; line-height: 1.1; color: white; }
+        .hero-subtitle { font-size: 1rem; line-height: 1.4; color: white; }
+        .welcome-text { font-size: 1rem; color: #9F8151; }
+        .cta-button { padding: 0.8rem 1.5rem; font-size: 1.1rem; color: white; background: #9F8151; }
+        .home-section { padding: 1rem; min-height: 80vh; }
+        .home-content { max-width: 100%; }
+      }
+      
+      /* Performance optimizations */
+      * { will-change: auto; }
+      img { image-rendering: -webkit-optimize-contrast; }
+      .home-container, .home-section, .home-content { 
+        transform: translateZ(0); 
+        backface-visibility: hidden; 
+      }
+      .home-container { contain: layout style paint; }
+      html { scroll-behavior: auto; }
+      .home-section { contain: layout; }
+      
+      /* Touch device optimizations with accessibility */
+      @media (hover: none) and (pointer: coarse) {
+        .cta-button, .navbar-link, .blog-card {
+          min-height: 44px;
+          min-width: 44px;
+        }
+        .cta-button:focus, .navbar-link:focus, .blog-card:focus {
+          outline: 2px solid #9F8151;
+          outline-offset: 2px;
+        }
+        .cta-button:hover, .navbar-link:hover, .blog-card:hover {
+          background: inherit !important;
+          color: inherit !important;
+          transform: none !important;
+        }
+      }
+      
+      /* Accessibility improvements */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      
+      /* Ensure proper focus indicators */
+      button:focus, a:focus, [tabindex]:focus {
+        outline: 2px solid #9F8151;
+        outline-offset: 2px;
+      }
+      
+      /* Maintain color contrast */
+      .hero-title, .hero-subtitle, .welcome-text {
+        color: white !important;
+      }
+      
+      .cta-button {
+        color: white !important;
+        background: #9F8151 !important;
+      }
+    </style>
+    
     <title>Transact Flow</title>
   </head>
   <body>

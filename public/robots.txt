@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://transactflow.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /dashboard
+Disallow: /profile-settings
+Disallow: /user-management
+Disallow: /admin
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /solutions
+Allow: /blog
+Allow: /pricing
+Allow: /contact
+Allow: /faq
+
+# Crawl delay (optional)
+Crawl-delay: 1 

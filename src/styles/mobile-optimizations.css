@@ -1,0 +1,207 @@
+/* Mobile Performance Optimizations */
+
+/* Reduce animations on mobile for better performance */
+@media (max-width: 768px) {
+  /* Only disable animations that don't affect accessibility */
+  .hero-realistic-image,
+  .client-logo,
+  .blog-image {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  /* Optimize images for mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+    /* Prevent layout shifts */
+    aspect-ratio: attr(width / height);
+  }
+  
+  /* Reduce box shadows on mobile */
+  .hero-realistic-image {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+  }
+  
+  /* Optimize text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* Reduce complex gradients on mobile */
+  .home-section {
+    background: #0A4834 !important;
+  }
+  
+  /* Optimize loading placeholders */
+  .loading-placeholder {
+    min-height: 150px !important;
+    animation: none !important;
+    background: #f5f5f5 !important;
+  }
+  
+  /* Keep hover effects for accessibility but optimize them */
+  .cta-button:hover,
+  .navbar-link:hover,
+  .blog-card:hover {
+    /* Keep hover effects for keyboard navigation */
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Optimize slider for mobile */
+  .slick-slider {
+    touch-action: pan-y;
+  }
+  
+  .slick-dots {
+    bottom: -25px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+  }
+}
+
+/* Ultra-mobile optimizations */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .welcome-text {
+    font-size: 1rem !important;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1.1rem !important;
+  }
+  
+  /* Reduce padding and margins */
+  .home-section {
+    padding: 1rem !important;
+    min-height: 80vh !important;
+  }
+  
+  .home-content {
+    max-width: 100% !important;
+  }
+}
+
+/* Performance optimizations for all devices */
+* {
+  /* Optimize paint and layout */
+  will-change: auto;
+}
+
+/* Optimize images */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Reduce repaints */
+.home-container,
+.home-section,
+.home-content {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize fonts */
+@font-face {
+  font-display: swap;
+}
+
+/* Reduce memory usage */
+.home-container {
+  contain: layout style paint;
+}
+
+/* Optimize scrolling */
+html {
+  scroll-behavior: auto;
+}
+
+/* Reduce JavaScript execution */
+.home-section {
+  contain: layout;
+}
+
+/* Optimize for touch devices while maintaining accessibility */
+@media (hover: none) and (pointer: coarse) {
+  .cta-button,
+  .navbar-link,
+  .blog-card {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Keep focus states for accessibility */
+  .cta-button:focus,
+  .navbar-link:focus,
+  .blog-card:focus {
+    outline: 2px solid #9F8151;
+    outline-offset: 2px;
+  }
+  
+  /* Disable hover effects on touch devices but keep focus */
+  .cta-button:hover,
+  .navbar-link:hover,
+  .blog-card:hover {
+    background: inherit !important;
+    color: inherit !important;
+    transform: none !important;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Ensure proper focus indicators */
+.cta-button:focus,
+.navbar-link:focus,
+.blog-card:focus {
+  outline: 2px solid #9F8151;
+  outline-offset: 2px;
+}
+
+/* Maintain color contrast */
+.hero-title,
+.hero-subtitle,
+.welcome-text {
+  color: white !important;
+}
+
+.cta-button {
+  color: white !important;
+  background: #9F8151 !important;
+}
+
+/* Ensure proper heading hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+}
+
+/* Maintain link accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid #9F8151;
+  outline-offset: 2px;
+} 

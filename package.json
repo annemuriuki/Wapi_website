@@ -1,7 +1,7 @@
 {
-  "name": "wapi_website",
-  "private": true,
-  "version": "0.0.0",
+  "name": "transactflow",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,7 @@
     "@emailjs/browser": "^4.4.1",
     "@vercel/analytics": "^1.5.0",
     "@vis.gl/react-google-maps": "^1.5.2",
+    "embla-carousel-react": "^8.6.0",
     "react": "^19.1.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.1.0",
@@ -34,5 +35,33 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.4",
     "vite": "^6.3.5"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "business",
+    "website",
+    "template",
+    "responsive",
+    "modern",
+    "professional",
+    "consulting",
+    "agency"
+  ],
+  "author": {
+    "name": "TransactFlow Team",
+    "email": "support@transactflow.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/transactflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/transactflow/issues"
+  },
+  "homepage": "https://transactflow.com",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   }
 }
