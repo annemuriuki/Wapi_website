@@ -7,10 +7,10 @@ import './styles/mobile-optimizations.css';
 
 // Performance optimization: Preload critical resources
 const preloadCriticalResources = () => {
-  // Preload critical images
+  // Preload critical images - using relative paths for production
   const criticalImages = [
-    '/src/assets/images/hero/hero_image.jpeg',
-    '/src/assets/images/logos/success-rate.png',
+    '/assets/images/hero_image.jpeg',
+    '/assets/images/success-rate.png',
   ];
   
   criticalImages.forEach(src => {
